@@ -6,11 +6,11 @@
   <style>
    
    #courseForm {
-  margin-top: 150px;
+  margin-top: 100px;
   
 }
 
-    h2 {
+    h1 {
       text-align: center;
     }
 
@@ -44,7 +44,7 @@ form {
    </head>
 <body style="background-color:lightblue">
 
-<center>  <h2>Sudent Registration</h2> </center>
+<center>  <h1>Sudent Registration</h1> </center>
 
   <form onsubmit="return submithandle()">
 
@@ -97,7 +97,10 @@ form {
   </script>
 
 
+
+
  <form id="courseForm">
+    <center><h1>Course registration</h1></center>
 <label>Course Name:</label>
  <input type="text" id="courseName" name="courseName">
 <button type="submit">Add Course</button>
