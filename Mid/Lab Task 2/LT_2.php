@@ -66,20 +66,6 @@ form {
 
   <div id="output"></div>
 
-
-  <div class="activity-section">
-  <h2>Activity Selection</h2>
-
-  <label for="activityName">Activity Name:</label>
-  <input type="text" id="activityName" placeholder="Enter activity name">
-
-  <button id="addActivityBtn">Add Activity</button>
-
-  <div id="activityError"></div>
-
-  <div id="activityList"></div>
-</div>
-
   <script>
     function registerParticipant() {
       let fullname = document.getElementById("fullname").value.trim();
@@ -92,8 +78,9 @@ form {
 
       outputDiv.innerHTML = "";
 
+      // Validation
       if (fullname === "" || email === "" || phone === "" || password === "" || confirmPassword === "") {
-        alert("Please fill the fields");
+        alert("Please fill alll the fields");
         return false;
       }
 
@@ -102,9 +89,9 @@ form {
         return false;
       }
 
+      // Show registration result
       outputDiv.innerHTML = `
-        <b>Registration Complete!</b>
-        <br>
+        <b>Registration Complete!</b><br><br>
         Name: ${fullname}<br>
         Email: ${email}<br>
         Phone: ${phone}
