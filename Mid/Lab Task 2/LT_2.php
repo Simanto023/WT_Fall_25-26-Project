@@ -66,7 +66,6 @@ form {
 
   <div id="output"></div>
 
-
   <div class="activity-section">
   <h2>Activity Selection</h2>
 
@@ -74,8 +73,6 @@ form {
   <input type="text" id="activityName" placeholder="Enter activity name">
 
   <button id="addActivityBtn">Add Activity</button>
-
-  <div id="activityError"></div>
 
   <div id="activityList"></div>
 </div>
@@ -92,8 +89,9 @@ form {
 
       outputDiv.innerHTML = "";
 
+      
       if (fullname === "" || email === "" || phone === "" || password === "" || confirmPassword === "") {
-        alert("Please fill the fields");
+        alert("Please fill alll the fields");
         return false;
       }
 
@@ -102,9 +100,9 @@ form {
         return false;
       }
 
+      
       outputDiv.innerHTML = `
-        <b>Registration Complete!</b>
-        <br>
+        <b>Registration Complete!</b><br><br>
         Name: ${fullname}<br>
         Email: ${email}<br>
         Phone: ${phone}
