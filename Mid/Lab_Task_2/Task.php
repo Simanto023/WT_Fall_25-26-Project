@@ -44,7 +44,7 @@ form {
    </head>
 <body style="background-color:lightblue">
 
-<center>  <h1>Sudent Registration</h1> </center>
+<center>  <h1>Student Registration</h1> </center>
 
   <form onsubmit="return submithandle()">
 
@@ -100,7 +100,7 @@ form {
 
 
  <form id="courseForm">
-    <center><h1>Course registration</h1></center>
+    <center><h1>Course Registration</h1></center>
 <label>Course Name:</label>
  <input type="text" id="courseName" name="courseName">
 <button type="submit">Add Course</button>
