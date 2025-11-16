@@ -1,118 +1,95 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Participant Registration</title>
+     <head>
+        <title>index</title>
+</head>
+<style>
 
-  <style>
+    body{
+        background-color:MintCream;
+    }
+
+
+#div1{
+    text-align:left;
+    margin-top:20px;
+    background-color:Beige;
+    width:500px;
+    height: 600px;
+    font-weight: bold;
+}
+#div2{padding:10px;}
    
+   .box{
+    length=80px;
+    width:480px;
+   }
+select{
+    margin-bottom:5px;
+    width:480px;
+    margin-left:10px;
+}
+button{
+    color:white;
+    background-color:MidnightBlue;
+    padding:5px;
+    width:460px;
+}
+#h2_1{
+    color:MidnightBlue;
+}
+#h2_2{
+    color:MidnightBlue;
+}
 
-    h2 {
-      text-align: center;
-      color: #003366;
-    }
+</style>
+<body>
+<center>
+    <h2 id ="h2_1"> Clinic Patient Registration</h2>
+</center>
 
-form {
-      background-color: #eae9daff;
-      padding: 20px;
-      width: 300px;
-      margin: 0 auto;
-    }
+<center>
+<div id="div1">
+    <div id="div2">
+  Full Name: <br>
+ <center> <input type ="text"class="box"></center> <br>
 
-     input {
-      width: 90%;
-      padding: 10px;
-      margin-top: 10px;
-    }
+   Age: <br>
+  <center><input type ="text"class="box"> </center><br>
 
-    button {
-        width: 100%;
-      background-color: #003366;
-      color: white;
-      cursor: pointer;
-      padding: 10px;
-      margin-top: 10px;
-    }
+   Phone Number: <br>
+ <center> <input type ="text"class="box"> </center><br>
 
-#output {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 16px;
-      color: #003366;
-    } </style>
-   </head>
-             <body>
+   Email Address: <br>
+ <center> <input type ="text"class="box"></center> <br> 
 
-<center>  <h2>Participant Registration</h2> </center>
+  Insurance Provider:<br>
+  <select>
+    <option>Select provider</option>
+  </select><br>
+  
+  Insurance Policy Number: <br>
+ <center> <input type ="text"class="box"> </center>
+  <h2 id="h2_2"> 
+     <center> Additional Information</center>
+  </h2>
 
-  <form onsubmit="return registerParticipant()">
+   Username: <br>
+  <center><input type ="text"class="box"> </center><br> 
 
-    <label>Full Name:</label>
-    <input type="text" id="fullname">
+   Password: <br>
+  <center><input type ="text"class="box"> </center><br> 
 
-    <label>Email:</label>
-    <input type="email" id="email">
+   Confirm Password: <br>
+ <center> <input type ="text" class="box"></center> <br> 
 
-    <label>Phone Number:</label>
-    <input type="text" id="phone">
-
-    <label>Password:</label>
-    <input type="password" id="password">
-
-    <label>Confirm Password:</label>
-    <input type="password" id="confirmPassword">
-
-    <button type="submit">Register</button>
-  </form>
-
-  <div id="output"></div>
-
-
-  <div class="activity-section">
-  <h2>Activity Selection</h2>
-
-  <label for="activityName">Activity Name:</label>
-  <input type="text" id="activityName" placeholder="Enter activity name">
-
-  <button id="addActivityBtn">Add Activity</button>
-
-  <div id="activityError"></div>
-
-  <div id="activityList"></div>
+  <center><button>Register</button></center>
 </div>
-
-  <script>
-    function registerParticipant() {
-      let fullname = document.getElementById("fullname").value.trim();
-      let email = document.getElementById("email").value.trim();
-      let phone = document.getElementById("phone").value.trim();
-      let password = document.getElementById("password").value;
-      let confirmPassword = document.getElementById("confirmPassword").value;
-
-      let outputDiv = document.getElementById("output");
-
-      outputDiv.innerHTML = "";
-
-      if (fullname === "" || email === "" || phone === "" || password === "" || confirmPassword === "") {
-        alert("Please fill the fields");
-        return false;
-      }
-
-      if (password !== confirmPassword) {
-        alert("Password mismatch!");
-        return false;
-      }
-
-      outputDiv.innerHTML = `
-        <b>Registration Complete!</b>
-        <br>
-        Name: ${fullname}<br>
-        Email: ${email}<br>
-        Phone: ${phone}
-      `;
-
-      return false;
-    }
-  </script>
+</div>
+</center>
 
 </body>
-</html>
+
+
+    </html>
+
