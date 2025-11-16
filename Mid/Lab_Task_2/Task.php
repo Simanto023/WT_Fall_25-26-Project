@@ -5,6 +5,10 @@
 
   <style>
    
+   #courseForm {
+  margin-top: 150px;
+  
+}
 
     h2 {
       text-align: center;
@@ -24,7 +28,7 @@ form {
     }
 
     button {
-      background-color: #003366;
+      background-color:blue;
       color: white;
       cursor: pointer;
       padding: 10px;
@@ -35,7 +39,7 @@ form {
       margin-top: 20px;
       text-align: center;
       font-size: 16px;
-      color: #003366;
+      color: blue;
     } </style>
    </head>
 <body style="background-color:lightblue">
@@ -92,15 +96,14 @@ form {
     }
   </script>
 
-<div style="height: 50px;"></div> 
 
- <form id="courseForm" onsubmit="return addCourseHandle()">
-
-
+ <form id="courseForm">
 <label>Course Name:</label>
  <input type="text" id="courseName" name="courseName">
 <button type="submit">Add Course</button>
-</form>
+  <input type="text" value="webtech">
+  <button>Delete</button>
+  </form>
  
  
 </body>
