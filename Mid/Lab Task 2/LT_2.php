@@ -37,8 +37,19 @@ form {
       margin-top: 20px;
       text-align: center;
       font-size: 16px;
-      color: #003366;
-    } </style>
+      color: #003366;}
+
+    #act {
+  background-color: #ffffff;
+   width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+ 
+}
+#activityName{
+  width=100%;
+}
+     </style>
    </head>
              <body>
 
@@ -66,11 +77,11 @@ form {
 
   <div id="output"></div>
 
-  <div class="activity-section">
+  <div class="act">
   <h2>Activity Selection</h2>
 
   <label for="activityName">Activity Name:</label>
-  <input type="text" id="activityName" placeholder="Enter activity name">
+  <input type="text" id="activityName" >
 
   <button id="addActivityBtn">Add Activity</button>
 
