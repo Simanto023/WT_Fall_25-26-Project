@@ -172,3 +172,18 @@ body {
     margin: 0;
     color: #d5d5d5;
 }
+
+
+
+#usericon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 50%;
+
+    position: fixed;   /* stays on screen */
+    top: 10px;         /* distance from top */
+    right: 10px;       /* distance from right */
+    z-index: 1000;     /* sits above other stuff */
+}
+

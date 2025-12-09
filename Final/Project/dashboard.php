@@ -17,12 +17,13 @@
 </a>
 
     <a href="Catalogue.html">Catalogue</a>
-    <a href="Locations.html">Locations</a>
-    <a href="about.html">About</a>
-    <a href="history.html">History</a>
-    <a href="cart.html">cart</a>
+    <a href="compare.html">Compare Cars</a>
+    <a href="marketplace.html">Marketplace</a>
+    <a href="orderhistory.html">Order History</a>
+    <a href="cart.html">Cart</a>
 
 </div>
+
 
 <div class="search-box">
     <h2>Latest cars at NG Auto!</h2>
@@ -72,6 +73,10 @@
 </div>
 
 
+<a href="user1.html">
+    <img src="user1.png" id="usericon"
+         style="width:60px; height:60px; position:fixed; top:10px; right:70px; z-index:1000; border:3px solid red;">
+</a>
 
 
 </body>
