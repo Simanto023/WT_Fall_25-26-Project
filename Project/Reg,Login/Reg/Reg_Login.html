@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | CarWay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+    <div class="auth-container">
+
+        <!-- Left Image Section -->
+        <div class="auth-image">
+            <img src="images/car-register.jpg" alt="Car Image">
+        </div>
+
+        <!-- Right Form Section -->
+        <div class="auth-form">
+            <div class="form-header">
+                <h1>Create your account</h1>
+                <p>Enter your details to get started</p>
+            </div>
+
+            <form action="#" method="post">
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Re-enter password" required>
+                </div>
+
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox" required>
+                        I agree to the Terms & Conditions
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    Sign Up
+                </button>
+
+                <div class="form-footer">
+                    <p>Already have an account?
+                        <a href="login.html">Sign In</a>
+                    </p>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

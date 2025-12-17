@@ -39,16 +39,7 @@ form {
       font-size: 16px;
       color: #003366;}
 
-    #act {
-  background-color: #ffffff;
-   width: 300px;
-  margin: 20px auto;
-  padding: 20px;
- 
-}
-#activityName{
-  width=100%;
-}
+  
      </style>
    </head>
              <body>
@@ -57,13 +48,13 @@ form {
 
   <form onsubmit="return registerParticipant()">
 
-    <label>Full Name:</label>
+     <label>Full Name:</label>
     <input type="text" id="fullname">
 
     <label>Email:</label>
     <input type="email" id="email">
 
-    <label>Phone Number:</label>
+     <label>Phone Number:</label>
     <input type="text" id="phone">
 
     <label>Password:</label>
@@ -73,12 +64,12 @@ form {
     <input type="password" id="confirmPassword">
 
     <button type="submit">Register</button>
-  </form>
+      </form>
 
   <div id="output"></div>
 
   <div class="act">
-  <h2>Activity Selection</h2>
+<h2>Activity Selection</h2>
 
   <label for="activityName">Activity Name:</label>
   <input type="text" id="activityName" >
@@ -88,8 +79,8 @@ form {
   <div id="activityList"></div>
 </div>
 
-  <script>
-    function registerParticipant() {
+<script>
+   function registerParticipant() {
       let fullname = document.getElementById("fullname").value.trim();
       let email = document.getElementById("email").value.trim();
       let phone = document.getElementById("phone").value.trim();
@@ -101,7 +92,7 @@ form {
       outputDiv.innerHTML = "";
 
       
-      if (fullname === "" || email === "" || phone === "" || password === "" || confirmPassword === "") {
+    if (fullname === "" || email === "" || phone === "" || password === "" || confirmPassword === "") {
         alert("Please fill alll the fields");
         return false;
       }
@@ -121,6 +112,7 @@ form {
 
       return false;
     }
+    
   </script>
 
 </body>
