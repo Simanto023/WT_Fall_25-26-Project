@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f5fb;
+}
+
+header {
+    padding: 8px 30px;
+    background: #2b2b2b;
+    border-bottom: 1px solid #ddd;
+    color: gold;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#header-logo {
+    width: 40px;
+}
+
+section {
+    max-width: 600px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+#box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 350px;
+    margin: auto;
+}
+
+#box h3 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+.field label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.field input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+
+#options a {
+    color: #5b4df5;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#btn_sign {
+    width: 100%;
+    background: black;
+    color: gold;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+
+.register {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register a {
+    color: #5b4df5;
+}
+
+
+footer {
+    text-align: center;
+    background: white;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+}
+
+footer a {
+    color: #5b4df5;
+}
+
+::placeholder {
+    font-size: 14px;
+}
