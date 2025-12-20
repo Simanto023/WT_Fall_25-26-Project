@@ -3,17 +3,17 @@
 <head>
 
     <title>Dashboard</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="CSS/dashboard.css">
 </head>
 <body>
 
-    <img src="bg2.png" alt="" id="bg">
+    <img src="images/bg2.png" alt="" id="bg">
     
 
 <div id="p1">
 
 <a href="dashboard.html">
-    <img src="logo.png" alt="logo" id="logo">
+    <img src="images/logo.png" alt="logo" id="logo">
 </a>
 
     <a href="Catalogue.html">Catalogue</a>
@@ -74,7 +74,7 @@
 
 
 <a href="user1.html">
-    <img src="user1.png" id="usericon"
+    <img src="images/user1.png" id="usericon"
          style="width:60px; height:60px; position:fixed; top:10px; right:70px; z-index:1000; border:3px solid red;">
 </a>
 
