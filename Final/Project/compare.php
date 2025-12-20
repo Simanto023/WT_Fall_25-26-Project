@@ -19,6 +19,69 @@
          style="width:60px; height:60px; position:absolute; top:10px; right:70px; z-index:1000; border:3px solid red;">
     </a>
 
+     <h1>Compare Cars</h1>
+    <p style="text-align:center;">Pick two cars to compare</p>
+
+    <div id="selectors">
+        <select>
+            <option>Select Car 1</option>
+        </select>
+
+        <select>
+            <option>Select Car 2</option>
+        </select>
+    </div>
+
+<div id="comparison-box">
+
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>Nissan GT-R</th>
+            <th>Toyota Supra</th>
+        </tr>
+        <tr>
+            <td>Image</td>
+            <td><img src="images/gtr.jpg" width="250"></td>
+            <td><img src="images/Toyota_Supra.jpg" width="250"></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>Nissan GT-R</td>
+            <td>Toyota Supra</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>$113,000</td>
+            <td>$50,000</td>
+        </tr>
+        <tr>
+            <td>Horsepower</td>
+            <td>565 HP</td>
+            <td>382 HP</td>
+        </tr>
+        <tr>
+            <td>Engine</td>
+            <td>3.8L Twin-Turbo V6</td>
+            <td>3.0L Turbo Inline-6</td>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td>Sports</td>
+            <td>Sports</td>
+        </tr>
+    </table>
+
+</div>
+
+
+
+
+    <div id="footer">
+    <p>© 2025 NG Auto. All rights reserved.</p>
+    <p>Contact: support@ngauto.com | +880-111-222-333</p>
+</div>
+
 
 </body>
 </html>
