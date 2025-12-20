@@ -19,8 +19,10 @@
          style="width:60px; height:60px; position:absolute; top:10px; right:70px; z-index:1000; border:3px solid red;">
     </a>
 
+
+
      <h1>Compare Cars</h1>
-    <p style="text-align:center;">Pick two cars to compare</p>
+    <p>Pick two cars to compare</p>
 
     <div id="selectors">
         <select>
@@ -31,6 +33,8 @@
             <option>Select Car 2</option>
         </select>
     </div>
+
+
 
 <div id="comparison-box">
 
@@ -73,7 +77,6 @@
     </table>
 
 </div>
-
 
 
 
