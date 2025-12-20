@@ -9,8 +9,9 @@
 </head>
 
 <body>
-
+<a href="dashboard.php">
     <img src="images/logo.png" id="logo">
+</a>
 
     <h1>Catalogue</h1>
 
@@ -18,6 +19,16 @@
         <a href="#" id="familyBtn">Family Cars</a> | 
         <a href="#" id="sportsBtn">Sports Cars</a>
     </div>
+
+
+
+<a href="user1.html">
+    <img src="images/user1.png" id="usericon"
+         style="width:60px; height:60px; position:absolute; top:10px; right:70px; z-index:1000; border:3px solid red;">
+</a>
+
+
+
 
 <!-- Family CARS SECTION -->
     <div id="family">

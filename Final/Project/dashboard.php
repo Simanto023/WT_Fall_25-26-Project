@@ -75,7 +75,7 @@
 
 <a href="user1.html">
     <img src="images/user1.png" id="usericon"
-         style="width:60px; height:60px; position:fixed; top:10px; right:70px; z-index:1000; border:3px solid red;">
+         style="width:60px; height:60px; position:absolute; top:10px; right:70px; z-index:1000; border:3px solid red;">
 </a>
 
 
