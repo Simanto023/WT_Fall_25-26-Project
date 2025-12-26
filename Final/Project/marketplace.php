@@ -19,7 +19,7 @@
 
 
 <div id="post-listing">
-    <a href="add-listing.php">
+    <a href="postlisting.php">
         <button class="post-btn">Post Your Listing</button>
     </a>
 </div>
