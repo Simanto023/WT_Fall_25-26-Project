@@ -34,7 +34,7 @@
 
         <tbody>
             <tr>
-                <td>SUV</td>
+                <td>suv</td>
                 <td>
                     <button class="delete" type="button" onclick="return cannotDelete()">
                         Delete
@@ -42,7 +42,25 @@
                 </td>
             </tr>
 
-            
+            <tr>
+                <td>family cars</td>
+                <td>
+                    <button class="delete" type="button"
+                        onclick="return confirm('Delete this category?')">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>sports cars</td>
+                <td>
+                    <button class="delete" type="button"
+                        onclick="return confirm('Delete this category?')">
+                        Delete
+                    </button>
+                </td>
+            </tr>
         </tbody>
     </table>
     <form id="categoryForm">
