@@ -5,7 +5,8 @@
     <title>Manage Categories | NG Auto</title>
     <link rel="stylesheet" href="css/manage_category.css">
 </head>
-
+<script src="js/manage_category.js">
+</script>
 <body>
 <header>
     <div class="topbar">
@@ -60,17 +61,7 @@
 
 </main>
 
-<script>
-function toggleForm() {
-    const form = document.getElementById("categoryForm");
-    form.style.display = (form.style.display === "block") ? "none" : "block";
-}
 
-function cannotDelete() {
-    alert("Cannot delete category. Cars are still assigned to this category.");
-    return false;
-}
-</script>
 
 </body>
 </html>
