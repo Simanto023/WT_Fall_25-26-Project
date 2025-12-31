@@ -1,3 +1,4 @@
+<?php include "PHP/register_logic.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,12 +21,13 @@
 
         <h3>Create Account</h3>
 
-        <form method="post" action="PHP/register.php">
+        <form method="post" action="">
 
             <div class="field">
                 <label>Full Name:</label>
                 <input type="text" name="fullname" placeholder="Enter full name">
             </div>
+            
 
             <div class="field">
                 <label>Email:</label>
@@ -34,13 +36,24 @@
 
             <div class="field">
                 <label>Password:</label>
-                <input type="password" name="password" placeholder="Enter password (Atleast 6 characters)">
+                <input type="password" name="password"
+                       placeholder="Use 7+ characters with uppercase, number & symbol.">
             </div>
 
             <div class="field">
                 <label>Confirm Password:</label>
-                <input type="password" name="confirm_password" placeholder="Re-enter password">
+                <input type="password" name="confirm_password"
+                       placeholder="Re-enter password">
             </div>
+
+        
+            <?php
+            if (!empty($passwordErrors)) {
+                echo "<ul style='color:red; font-size:12px; margin-top:8px'>";
+                foreach ($passwordErrors as $e) echo "<li>Password: $e</li>";
+                echo "</ul>";
+            }
+            ?>
 
             <button id="btn_sign" type="submit">Register</button>
 
