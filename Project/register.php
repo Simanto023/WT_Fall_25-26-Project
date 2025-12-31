@@ -27,12 +27,25 @@
                 <label>Full Name:</label>
                 <input type="text" name="fullname" placeholder="Enter full name">
             </div>
-            
+           <?php
+            if (!empty($nameErrors)) {
+                echo "<ul style='color:red; font-size:12px; margin-top:8px'>";
+                foreach ($nameErrors as $e) echo "<li>Name: $e</li>";
+                echo "</ul>";
+            }
+            ?>
 
             <div class="field">
                 <label>Email:</label>
                 <input type="text" name="email" placeholder="Enter email">
             </div>
+            <?php
+            if (!empty($emailErrors)) {
+                echo "<ul style='color:red; font-size:12px; margin-top:8px'>";
+                foreach ($emailErrors as $e) echo "<li>Email: $e</li>";
+                echo "</ul>";
+            }
+            ?>
 
             <div class="field">
                 <label>Password:</label>

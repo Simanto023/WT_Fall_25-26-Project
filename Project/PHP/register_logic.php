@@ -16,7 +16,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
     $confirm  = $_POST["confirm_password"];
 
-    
+    // NAME
+    if (empty($fullname)) {
+        $nameErrors[] = "Full name is required";
+    }
+
+    // EMAIL
+    if (empty($email)) {
+        $emailErrors[] = "Email is required";
+    }
+
     // PASSWORD
     if (empty($password)) {
         $passwordErrors[] = "Password is required";
@@ -59,7 +68,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO users (full_name, email, password, role)
                 VALUES ('$fullname', '$email', '$hashedPassword', 'customer')";
 
-        $conn->query($sql);
+        if ($conn->query($sql)) {
+    echo "<script>
+            alert('Registration successful! Please login.');
+            window.location.href = 'login.html';
+          </script>";
+    exit;
+}
     }
 }
 ?>
