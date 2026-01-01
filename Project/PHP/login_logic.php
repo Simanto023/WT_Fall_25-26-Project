@@ -33,30 +33,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($result->num_rows == 1) {
 
             $user = $result->fetch_assoc();
+
             //pass check
             if (password_verify($password, $user["password"])) {
+
                 //role check
                 if ($user["role"] == "admin") {
                     echo "<script>
-                            alert('Welcome Admin');
                             window.location.href = 'admin_dashboard.html';
                           </script>";
                     exit;
                 }
                 else {
                     echo "<script>
-                            alert('Login successful');
                             window.location.href = '../customer_dashboard.html';
                           </script>";
                     exit;
                 }
 
             } else {
-                $loginErrors[] = "Invalid email or password";
+                $loginErrors[] = "Invalid password!";
             }
 
         } else {
-            $loginErrors[] = "Invalid email or password";
+            $loginErrors[] = "Email not found!";
         }
     }
 }

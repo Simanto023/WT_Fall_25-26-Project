@@ -22,32 +22,52 @@ include "PHP/login_logic.php";
     <div id="box">
 
         <h3>Sign In</h3>
-     <form method="post" action="">
-        <div class="field">
-            <label>Email:</label>
-            <input type="email" name= "email" placeholder="Enter email">
-        </div>
+        
+        <form method="post" action="">
 
-        <div class="field">
-            <label>Password:</label>
-            <input type="password" name="password" placeholder="Enter password">
-        </div>
+            <div class="field">
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="Enter email">
+            </div>
 
-        <div id="options">
-            <label class="remember">
-                <input type="checkbox" name="remember"> Remember me
-            </label>
+            <?php
+           if (!empty($emailErrors)) {
+                echo "<ul style='color:red; font-size:12px; margin-top:8px'>";
+                foreach ($emailErrors as $e) echo "<li>Email: $e</li>";
+                echo "</ul>";
+            }
+            ?>
 
-            <a href="reset_password.html">Recover Password</a>
-        </div>
+            <div class="field">
+                <label>Password:</label>
+                <input type="password" name="password" placeholder="Enter password">
+            </div>
 
-        <button id="btn_sign" type="submit">Sign In</button>
+              <?php
+           if (!empty($passwordErrors)) {
+                echo "<ul style='color:red; font-size:12px; margin-top:8px'>";
+                foreach ($passwordErrors as $e) echo "<li>Password: $e</li>";
+                echo "</ul>";
+            }
+            ?>
 
-        <p class="register">
-            Don’t have an account?
-            <a href="register.php">Register here</a>
-        </p>
-</form>
+            <div id="options">
+                <label class="remember">
+                    <input type="checkbox" name="remember"> Remember me
+                </label>
+
+                <a href="reset_password.html">Recover Password</a>
+            </div>
+
+            <button id="btn_sign" type="submit">Sign In</button>
+
+            <p class="register">
+                Don’t have an account?
+                <a href="register.php">Register here</a>
+            </p>
+
+        </form>
+
     </div>
 </section>
 
