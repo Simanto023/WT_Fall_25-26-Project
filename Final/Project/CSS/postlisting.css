@@ -1,7 +1,7 @@
 body {
     background-color: black;
     color: white;
-    font-family: Arial;
+    padding-top: 110px;
 }
 
 /* Center the form */
@@ -68,4 +68,17 @@ input[type="submit"]:hover {
 /* Error messages */
 p {
     text-align: center;
+}
+
+
+
+
+#logo {
+    width: 150px;
+    height: 82px;
+    object-fit: cover;
+    border-radius: 6px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
