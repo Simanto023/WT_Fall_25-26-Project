@@ -22,7 +22,7 @@ include "PHP/login_logic.php";
     <div id="box">
 
         <h3>Sign In</h3>
-        
+
         <form method="post" action="">
 
             <div class="field">
@@ -47,6 +47,13 @@ include "PHP/login_logic.php";
            if (!empty($passwordErrors)) {
                 echo "<ul style='color:red; font-size:12px; margin-top:8px'>";
                 foreach ($passwordErrors as $e) echo "<li>Password: $e</li>";
+                echo "</ul>";
+            }
+            ?>
+             <?php
+           if (!empty($loginErrors)) {
+                echo "<ul style='color:red; font-size:12px; margin-top:8px'>";
+                foreach ($loginErrors as $e) echo "<li>Error: $e</li>";
                 echo "</ul>";
             }
             ?>
