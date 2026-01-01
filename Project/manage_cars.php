@@ -78,7 +78,7 @@
         </tbody>
     </table>
 
-    <form id="carForm">
+    <form id="carForm" method="post" action="PHP/add_car.php" enctype="multipart/form-data">
         <h3>Add / Edit Car</h3>
 
         <div class="form-group">
