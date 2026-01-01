@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    color: orange;
+}
+
+form {
+    width: 400px;
+    margin: 30px auto;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+label {
+    color: #ccc;
+    font-size: 14px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    background-color: #111;
+    color: white;
+    border: 1px solid #444;
+}
+
+input[type="submit"] {
+    background-color: orange;
+    color: black;
+    border: none;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: darkorange;
+}
