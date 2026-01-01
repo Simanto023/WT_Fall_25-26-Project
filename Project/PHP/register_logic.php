@@ -20,49 +20,59 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($fullname)) {
         $nameErrors[] = "Full name is required";
     }
-    if (!preg_match("/^[a-zA-Z ]+$/", $fullname)) {
-    $nameErrors[] = "Name can contain only letters and spaces";
-    }
-    if (strlen($fullname) < 2) {
-    $nameErrors[] = "Name must be at least 2 characters";
-    }
-    if (preg_match("/\s{2,}/", $fullname)) {
-    $nameErrors[] = "Name should not contain multiple spaces";
-    }
-
+    else{
+        if (!preg_match("/^[a-zA-Z ]+$/", $fullname)) {
+        $nameErrors[] = "Name can contain only letters and spaces";
+       }
+        if (strlen($fullname) < 2) {
+        $nameErrors[] = "Name must be at least 2 characters";
+       }
+        if (preg_match("/\s{2,}/", $fullname)) {
+        $nameErrors[] = "Name should not contain multiple spaces";
+       }
+   }
     // EMAIL
     if (empty($email)) {
         $emailErrors[] = "Email is required";
     }
+    else {
+       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $emailErrors[] = "Invalid email format";
+      }
+      else {
+        $check = $conn->query("SELECT id FROM users WHERE email='$email'");
+        if ($check->num_rows > 0) {
+            $emailErrors[] = "Email already exists";
+        }
+       }
+   }  
 
     // PASSWORD
-    if (empty($password)) {
-        $passwordErrors[] = "Password is required";
+    if (empty($password)||empty($confirm)) {
+        $passwordErrors[] = "Password or Confirm Password is empty";
     }
-
-    if (empty($confirm)) {
-        $passwordErrors[] = "Confirm password is required";
-    }
-
-    if (!empty($password) && !empty($confirm) && $password != $confirm) {
+    else{
+        if (!empty($password) && !empty($confirm) && $password != $confirm) {
         $passwordErrors[] = "Passwords do not match";
-    }
+      }
 
-    if (strlen($password) < 8) {
+        if (strlen($password) < 8) {
         $passwordErrors[] = "At least 8 characters";
-    }
-     if (!preg_match("/[A-Z]/", $password)) {
+      }
+        if (!preg_match("/[A-Z]/", $password)) {
          $passwordErrors[] = "At least 1 uppercase letter";
-    }
-    if (!preg_match("/[a-z]/", $password)) {
+      }
+       if (!preg_match("/[a-z]/", $password)) {
         $passwordErrors[] = "At least 1 lowercase letter";
-     }
-    if (!preg_match("/[0-9]/", $password)) {
+      }
+       if (!preg_match("/[0-9]/", $password)) {
         $passwordErrors[] = "At least 1 number";
-     }
-    if (!preg_match("/[@$!%*?&#]/", $password)) {
+      }
+       if (!preg_match("/[@$!%*?&#]/", $password)) {
         $passwordErrors[] = "At least 1 special character";
-     }
+      }
+    }
+    
     
 
     // Database entry
