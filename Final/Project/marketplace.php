@@ -80,12 +80,7 @@
 <br>
 
 
-    
-
 </div>
-
-
-
 
 
 
@@ -103,9 +98,8 @@
             <p>Location</p>
 
             <div class="listing-meta">
-                <span>Mileage</span>
-                <span>Fuel</span>
-                <span>Transmission</span>
+                Brand <br> <br>
+                Condition
             </div>
 
             <p class="price">Price</p>
@@ -120,9 +114,8 @@
             <p>Location</p>
 
             <div class="listing-meta">
-                <span>Mileage</span>
-                <span>Fuel</span>
-                <span>Transmission</span>
+                Brand <br> <br>
+                Condition
             </div>
 
             <p class="price">Price</p>
@@ -137,9 +130,8 @@
             <p>Location</p>
 
             <div class="listing-meta">
-                <span>Mileage</span>
-                <span>Fuel</span>
-                <span>Transmission</span>
+                Brand <br> <br>
+                Condition
             </div>
 
             <p class="price">Price</p>
