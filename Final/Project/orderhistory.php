@@ -15,11 +15,6 @@
 
 
 
-
-<a href="user1.html">
-    <img src="images/user1.png" id="usericon">
-</a>
-
 <h1>Order History</h1>
 
 <div id="orders">
