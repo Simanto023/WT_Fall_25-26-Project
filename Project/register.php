@@ -74,7 +74,7 @@
 
         <p class="register">
             Already have an account?
-            <a href="login.html">Sign in</a>
+            <a href="login.php">Sign in</a>
         </p>
 
     </div>

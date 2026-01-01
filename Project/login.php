@@ -1,3 +1,6 @@
+<?php
+include "PHP/login_logic.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,10 +22,10 @@
     <div id="box">
 
         <h3>Sign In</h3>
-     <form>
+     <form method="post" action="">
         <div class="field">
             <label>Email:</label>
-            <input type="text" name= "email" placeholder="Enter email">
+            <input type="email" name= "email" placeholder="Enter email">
         </div>
 
         <div class="field">
@@ -38,7 +41,7 @@
             <a href="reset_password.html">Recover Password</a>
         </div>
 
-        <button id="btn_sign">Sign In</button>
+        <button id="btn_sign" type="submit">Sign In</button>
 
         <p class="register">
             Don’t have an account?
