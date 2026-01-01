@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<center> <h1>Put your car up for sale!</h1> </center>
+<h1>Sell Your Car</h1>
 
 <?php
 $name = "";
@@ -21,13 +21,13 @@ $error = "";
 
 if (isset($_POST["submit"])) {
 
-    // Listing Title
+    // Name
     if (empty($_POST["name"])) {
-        $error .= "Name is required.<br>";
+        $error .= "Car name is required.<br>";
     } else {
         $name = $_POST["name"];
         if (!preg_match("/^[a-zA-Z ]+$/", $name)) {
-            $error .= "Name can only contain letters and spaces.<br>";
+            $error .= "Car name can only contain letters and spaces.<br>";
         }
     }
 
@@ -53,7 +53,7 @@ if (isset($_POST["submit"])) {
     }
 
     // Price
-    if (empty($_POST["price"])) {
+    if ($_POST["price"] === "") {
         $error .= "Price is required.<br>";
     } else if (!is_numeric($_POST["price"])) {
         $error .= "Price must be numeric.<br>";
@@ -61,8 +61,8 @@ if (isset($_POST["submit"])) {
         $price = $_POST["price"];
     }
 
-    // Phone Number
-    if (empty($_POST["phonenumber"])) {
+    // Phone number
+    if ($_POST["phonenumber"] === "") {
         $error .= "Phone number is required.<br>";
     } else if (!is_numeric($_POST["phonenumber"])) {
         $error .= "Phone number must be numeric.<br>";
@@ -70,39 +70,96 @@ if (isset($_POST["submit"])) {
         $phonenumber = $_POST["phonenumber"];
     }
 
-    // Image Upload
+    // Image
     if (empty($_FILES["image"]["name"])) {
         $error .= "Image is required.<br>";
     } else {
         $image = $_FILES["image"]["name"];
-        $allowed = array("jpg", "jpeg", "png", "gif");
         $ext = strtolower(pathinfo($image, PATHINFO_EXTENSION));
+        $allowed = array("jpg", "jpeg", "png", "gif");
 
         if (!in_array($ext, $allowed)) {
-            $error .= "Only JPG, JPEG, PNG, and GIF images are allowed.<br>";
+            $error .= "Only JPG, JPEG, PNG, or GIF images allowed.<br>";
         }
     }
 
-    // Success (no errors)
     if ($error == "") {
         echo "<p style='color:green;'>Form submitted successfully!</p>";
-        // Later you will:
-        // - move uploaded file
-        // - insert into database
     }
 }
 ?>
 
-<form action="" method="post" enctype="multipart/form-data">
+<form method="post" action="" enctype="multipart/form-data">
 
-    <label>Listing Title:</label><br>
+    <label>Car Name:</label><br>
     <input type="text" name="name" value="<?php echo $name; ?>"><br><br>
 
     <label>Brand:</label><br>
-    <input type="text" name="brand" value="<?php echo $brand; ?>"><br><br>
+    <select name="brand">
+        <option value="">Select Brand</option>
+        <option>Abarth</option>
+        <option>Acura</option>
+        <option>Alfa Romeo</option>
+        <option>Audi</option>
+        <option>BMW</option>
+        <option>Bugatti</option>
+        <option>Cadillac</option>
+        <option>Chevrolet</option>
+        <option>Chrysler</option>
+        <option>Citroen</option>
+        <option>Dacia</option>
+        <option>Daewoo</option>
+        <option>Daihatsu</option>
+        <option>Dodge</option>
+        <option>Ferrari</option>
+        <option>Fiat</option>
+        <option>Ford</option>
+        <option>Genesis</option>
+        <option>GMC</option>
+        <option>Honda</option>
+        <option>Hyundai</option>
+        <option>Infiniti</option>
+        <option>Isuzu</option>
+        <option>Jaguar</option>
+        <option>Jeep</option>
+        <option>Kia</option>
+        <option>Lamborghini</option>
+        <option>Land Rover</option>
+        <option>Lexus</option>
+        <option>Maserati</option>
+        <option>Mazda</option>
+        <option>McLaren</option>
+        <option>Mercedes-Benz</option>
+        <option>Mini</option>
+        <option>Mitsubishi</option>
+        <option>Nissan</option>
+        <option>Opel</option>
+        <option>Peugeot</option>
+        <option>Porsche</option>
+        <option>Renault</option>
+        <option>Rolls-Royce</option>
+        <option>Saab</option>
+        <option>Skoda</option>
+        <option>Subaru</option>
+        <option>Suzuki</option>
+        <option>Tesla</option>
+        <option>Toyota</option>
+        <option>Volkswagen</option>
+        <option>Volvo</option>
+    </select><br><br>
 
     <label>Location:</label><br>
-    <input type="text" name="location" value="<?php echo $location; ?>"><br><br>
+    <select name="location">
+        <option value="">Select Location</option>
+        <option>Dhaka</option>
+        <option>Chattogram</option>
+        <option>Rajshahi</option>
+        <option>Khulna</option>
+        <option>Barishal</option>
+        <option>Sylhet</option>
+        <option>Rangpur</option>
+        <option>Mymensingh</option>
+    </select><br><br>
 
     <label>Condition:</label><br>
     <input type="radio" name="condition" value="new"> New
@@ -123,12 +180,6 @@ if (isset($_POST["submit"])) {
 </form>
 
 <?php
-
-
-
-
-// Show errors at bottom
-
 if ($error != "") {
     echo "<p style='color:red;'>$error</p>";
 }
