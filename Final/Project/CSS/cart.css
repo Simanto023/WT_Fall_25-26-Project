@@ -14,3 +14,37 @@ body {
     top: 10px;
     left: 10px;
 }
+
+
+
+#cart {
+    text-align: center;
+}
+
+.cart-box {
+    width: 40%;
+    background-color: #222;
+    border: 1px solid white;
+    padding: 10px;
+    display: inline-block;
+    margin: 15px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.cart-box img {
+    width: 220px;
+    height: 130px;
+}
+
+#checkout_btn {
+    padding: 10px 20px;
+    background: orange;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#checkout_btn:hover {
+    background: darkorange;
+}

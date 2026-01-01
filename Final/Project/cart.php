@@ -15,8 +15,33 @@
 
 
 
+<center><h2>Your Cart</h2></center>
 
+<div id="cart">
 
+    <div class="cart-box">
+        <img src="images/2020-toyota-corolla-sedan.jpg">
+        <h3>Toyota Corolla</h3>
+        <p>Price: 2,500,000</p>
+        <p>139 HP • 1.8L • Automatic</p>
+    </div>
+
+    <div class="cart-box">
+        <img src="images/honda civic.jpg">
+        <h3>Honda Civic</h3>
+        <p>Price: 3,000,000</p>
+        <p>158 HP • 2.0L • Automatic</p>
+    </div>
+
+</div>
+
+<hr>
+
+<center>
+    <p><strong>Total:</strong> 5,500,000</p>
+
+   <a href="checkout.php"> <button id="checkout_btn">Proceed to Checkout</button> </a>
+</center>
 
 
 
