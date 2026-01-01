@@ -21,7 +21,7 @@ $error = "";
 
 if (isset($_POST["submit"])) {
 
-    // Name
+
     if (empty($_POST["name"])) {
         $error .= "Car name is required.<br>";
     } else {
@@ -31,28 +31,28 @@ if (isset($_POST["submit"])) {
         }
     }
 
-    // Brand
+
     if (empty($_POST["brand"])) {
         $error .= "Brand is required.<br>";
     } else {
         $brand = $_POST["brand"];
     }
 
-    // Location
+
     if (empty($_POST["location"])) {
         $error .= "Location is required.<br>";
     } else {
         $location = $_POST["location"];
     }
 
-    // Condition
+
     if (empty($_POST["condition"])) {
         $error .= "Condition is required.<br>";
     } else {
         $condition = $_POST["condition"];
     }
 
-    // Price
+
     if ($_POST["price"] === "") {
         $error .= "Price is required.<br>";
     } else if (!is_numeric($_POST["price"])) {
@@ -61,7 +61,7 @@ if (isset($_POST["submit"])) {
         $price = $_POST["price"];
     }
 
-    // Phone number
+
     if ($_POST["phonenumber"] === "") {
         $error .= "Phone number is required.<br>";
     } else if (!is_numeric($_POST["phonenumber"])) {
@@ -70,7 +70,7 @@ if (isset($_POST["submit"])) {
         $phonenumber = $_POST["phonenumber"];
     }
 
-    // Image
+
     if (empty($_FILES["image"]["name"])) {
         $error .= "Image is required.<br>";
     } else {
