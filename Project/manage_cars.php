@@ -54,37 +54,7 @@ if (isset($_GET["error"])) {
             </tr>
         </thead>
         <tbody>
-    <tr>
-                <td><img src="images/cars/audi_a6.png" class="car-thumb"></td>
-                <td>Audi</td>
-                <td>A6</td>
-                <td>White</td>
-                <td>2.0L Turbo</td>
-                <td>261</td>
-                <td>Automatic</td>
-                <td>$55,000</td>
-                <td>Sedan</td>
-                <td>
-                    <button class="edit" type="button" onclick="toggleForm()">Edit</button>
-                    <button class="delete" type="button" onclick="return confirm('Delete this car?')">Delete</button>
-                </td>
-            </tr>
-
-           <tr>
-                <td><img src="images/cars/bmw_x5.png" class="car-thumb"></td>
-                <td>BMW</td>
-                <td>X5</td>
-                <td>Black</td>
-                <td>3.0L</td>
-                <td>335</td>
-                <td>Automatic</td>
-                <td>$60,000</td>
-                <td>SUV</td>
-                <td>
-                    <button class="edit" type="button" onclick="toggleForm()">Edit</button>
-                    <button class="delete" type="button" onclick="return confirm('Delete this car?')">Delete</button>
-                </td>
-            </tr>
+    
         </tbody>
     </table>
 
