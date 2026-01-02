@@ -113,6 +113,8 @@ if (!empty($cars)) {
           style="display: <?php echo $openForm ? 'block' : 'none'; ?>;">
 
         <h3>Add / Edit Car</h3>
+        
+        <?php if ($editCar) echo '<input type="hidden" name="car_id" value="'.$editCar['id'].'">'; ?>
 
         <div class="form-group">
             <label>Brand</label>

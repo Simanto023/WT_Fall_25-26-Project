@@ -5,5 +5,5 @@ function toggleForm() {
 }
 
 function editCar(id) {
-    window.location.href = "manage_cars.php?edit=" + id;
+    window.location.href = "manage_cars.php?edit=" + id ;
 }
