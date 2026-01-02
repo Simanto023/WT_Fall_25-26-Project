@@ -89,7 +89,7 @@
         <img src="images/2024_Mazda.jpg">
         <h3>Mazda CX-5 (Alt)</h3>
         <p>Price: 1229000</p>
-        <p>187 HP • 2.5L • Automatic</p>
+        <p>188 HP • 2.5L • Automatic</p>
     </div>
 
 </div>
