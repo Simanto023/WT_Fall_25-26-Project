@@ -73,7 +73,9 @@ if (isset($_GET["openForm"])) {
 if (!empty($cars)) {
     foreach ($cars as $car) {
         echo "<tr>";
-        echo "<td>—</td>";
+        echo "<td>
+        <img src='images/cars/{$car['image']}' class='car-thumb'>
+      </td>";
         echo "<td>{$car['brand']}</td>";
         echo "<td>{$car['model']}</td>";
         echo "<td>{$car['color']}</td>";
@@ -82,6 +84,10 @@ if (!empty($cars)) {
         echo "<td>{$car['transmission']}</td>";
         echo "<td>{$car['price']}</td>";
         echo "<td>{$car['category']}</td>";
+        echo "<td>
+                <button class='edit'>Edit</button>
+                <button class='delete'>Delete</button>
+              </td>";
         echo "</tr>";
     }
 }
