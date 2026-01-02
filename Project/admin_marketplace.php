@@ -78,12 +78,20 @@ if (!empty($listings)) {
 
     if ($row['status'] == 'pending') {
         echo "
-     <form method='post' action='PHP/approve_listing.php'>
-        <input type='hidden' name='listing_id' value='{$row['id']}'>
-        <textarea name='admin_comment' placeholder='Comment (optional)'
-        style='width:100%; height:50px; margin-bottom:6px;'></textarea>
-        <button type='submit' class='save'>Approve</button>
-    </form>
+     <form method='post' action='PHP/approve_listing.php' style='margin-bottom:6px;'>
+     <input type='hidden' name='listing_id' value='{$row['id']}'>
+     <textarea name='admin_comment' placeholder='Comment (optional)'
+        style='width:100%; height:50px;'></textarea>
+     <button type='submit' class='save'>Approve</button>
+</form>
+
+<form method='post' action='PHP/reject_listing.php'>
+     <input type='hidden' name='listing_id' value='{$row['id']}'>
+     <textarea name='admin_comment' placeholder='Reason for rejection'
+        style='width:100%; height:50px;'></textarea>
+     <button type='submit' class='cancel'>Reject</button>
+</form>
+
      ";
     }
     elseif ($row['status'] == 'approved') {
