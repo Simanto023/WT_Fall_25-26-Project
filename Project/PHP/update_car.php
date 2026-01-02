@@ -1,1 +1,32 @@
-//empty
+<?php
+include __DIR__ . "/../DB/db.php";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $id = $_POST['car_id'];
+    $brand = $_POST['brand'];
+    $model = $_POST['model'];
+    $color = $_POST['color'];
+    $engine = $_POST['engine_capacity'];
+    $hp = $_POST['horsepower'];
+    $transmission = $_POST['transmission'];
+    $price = $_POST['price'];
+    $category = $_POST['category'];
+
+    $sql = "UPDATE cars SET
+            brand='$brand',
+            model='$model',
+            color='$color',
+            engine_capacity='$engine',
+            horsepower='$hp',
+            transmission='$transmission',
+            price='$price',
+            category='$category'
+            WHERE id=$id";
+
+    if ($conn->query($sql)) {
+        header("Location: ../manage_cars.php");
+        exit;
+    }
+}
+?>
