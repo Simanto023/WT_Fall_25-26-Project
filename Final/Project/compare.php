@@ -36,7 +36,15 @@
         <select>
             <option>Select Car 2</option>
         </select>
+        <br>
+        <br>
+
+        <div>
+        <input type="submit">
+        </div>
+
     </div>
+
 
 
 
@@ -59,6 +67,11 @@
             <td>Toyota Supra</td>
         </tr>
         <tr>
+            <td>Color</td>
+            <td>White</td>
+            <td>Black</td>
+        </tr>
+        <tr>
             <td>Price</td>
             <td>$113,000</td>
             <td>$50,000</td>
@@ -69,9 +82,19 @@
             <td>382 HP</td>
         </tr>
         <tr>
-            <td>Engine</td>
-            <td>3.8L Twin-Turbo V6</td>
-            <td>3.0L Turbo Inline-6</td>
+            <td>Engine Capacity</td>
+            <td>3.8L</td>
+            <td>3.0L</td>
+        </tr>
+        <tr>
+            <td>Horse Power</td>
+            <td>150</td>
+            <td>150</td>
+        </tr>
+        <tr>
+            <td>Transmission</td>
+            <td>AWD</td>
+            <td>CVT</td>
         </tr>
         <tr>
             <td>Category</td>
