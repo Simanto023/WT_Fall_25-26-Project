@@ -54,60 +54,35 @@ if ($result && $result->num_rows > 0) {
         </thead>
 
         <tbody>
-            <tr>
-                <td><img src="images/cars/bmw_x5.png" class="car-thumb"></td>
-                <td>BMW X5 2019</td>
-                <td>BMW</td>
-                <td>New York</td>
-                <td>Used</td>
-                <td>$42,000</td>
-                <td>+1 555-234-9988</td>
-                <td>Pending</td>
+            <tbody>
+<?php
+if (!empty($listings)) {
+    foreach ($listings as $row) {
+        echo "<tr>";
 
-                <td>
-                    <form method="post" action="#">
-                        <label>Comment:</label><br>
-                        <textarea name="comment" rows="3" style="width:100%;"></textarea>
+        echo "<td>
+                <img src='images/cars/{$row['image']}' class='car-thumb'>
+              </td>";
 
-                        <div style="margin-top:8px;">
-                            <button class="save" type="submit" name="action" value="approve">
-                                Approve
-                            </button>
-                            <button class="cancel" type="submit" name="action" value="reject">
-                                Reject
-                            </button>
-                            <button class="delete" type="submit" name="action" value="delete">
-                                Delete
-                            </button>
-                        </div>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <td><img src="images/cars/audi_a6.png" class="car-thumb"></td>
-                <td>Audi A6 2020</td>
-                <td>Audi</td>
-                <td>California</td>
-                <td>Like New</td>
-                <td>$48,000</td>
-                <td>+1 555-887-4412</td>
-                <td>Approved</td>
+        echo "<td>{$row['car_name']}</td>";
+        echo "<td>{$row['brand']}</td>";
+        echo "<td>{$row['location']}</td>";
+        echo "<td>{$row['condition']}</td>";
+        echo "<td>$ {$row['price']}</td>";
+        echo "<td>{$row['phone_number']}</td>";
+        echo "<td>{$row['status']}</td>";
 
-                <td>
-                    <form method="post" action="#">
-                        <label>Comment:</label><br>
-                        <textarea rows="3" style="width:100%;" disabled>
-Approved listing
-                        </textarea>
+        echo "<td>
+                <button class='save'>Approve</button>
+                <button class='cancel'>Reject</button>
+                <button class='delete'>Delete</button>
+              </td>";
 
-                        <div style="margin-top:8px;">
-                            <button class="delete" type="submit" name="action" value="delete">
-                                Remove
-                            </button>
-                        </div>
-                    </form>
-                </td>
-            </tr>
+        echo "</tr>";
+    }
+}
+?>
+</tbody>
 
         </tbody>
     </table>
