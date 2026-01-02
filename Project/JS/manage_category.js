@@ -3,7 +3,8 @@ function toggleForm() {
     form.style.display = (form.style.display === "block") ? "none" : "block";
 }
 
-function cannotDelete() {
-    alert("Cannot delete category. Cars are still assigned to this category.");
-    return false;
+function deleteCategory(id) {
+    if (confirm("Delete this category?")) {
+        window.location.href = "PHP/delete_category.php?id=" + id;
+    }
 }
