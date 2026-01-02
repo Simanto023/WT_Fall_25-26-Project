@@ -13,6 +13,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: ../manage_category.php?error=1&openForm=1");
         exit;
     }
+    $check = $conn->query("SELECT id FROM categories WHERE name='$name'");
+
+    if ($check->num_rows > 0) {
+        header("Location: ../manage_category.php?error=duplicate&openForm=1");
+        exit;
+    }
 
     $sql = "INSERT INTO categories (name) VALUES ('$name')";
     $conn->query($sql);

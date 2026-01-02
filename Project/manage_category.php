@@ -17,7 +17,14 @@ if (isset($_GET["error"])) {
     $categoryError = "Category name is required";
 }
 if (isset($_GET["openForm"])) {
-    $openForm = true;
+    $openForm = true;  
+}
+if (isset($_GET["error"])) {
+    if ($_GET["error"] == "duplicate") {
+        $categoryError = "Category already exists";
+    } else {
+        $categoryError = "Category name is required";
+    }
 }
 
 ?>
