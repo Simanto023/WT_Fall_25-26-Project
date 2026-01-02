@@ -28,7 +28,7 @@ if ($result && $result->num_rows > 0) {
             <img src="images/logo.png" alt="NG Auto">
             <span>NG AUTO</span>
         </div>
-        <a href="admin_dashboard.html" class="back">← Back to Dashboard</a>
+        <a href="admin_dashboard.php" class="back">← Back to Dashboard</a>
     </div>
 </header>
 
@@ -37,6 +37,16 @@ if ($result && $result->num_rows > 0) {
 <div class="page-header">
     <h2>Used Car Marketplace</h2>
 </div>
+<form method="get" style="margin-bottom:20px;">
+    <label style="margin-right:10px;">Filter by status:</label>
+    <select name="status">
+        <option value="all">All Listings</option>
+        <option value="pending">Pending</option>
+        <option value="approved">Approved</option>
+        <option value="rejected">Rejected</option>
+    </select>
+    <button type="submit">Apply</button>
+</form>
 
 <table>
     <thead>
