@@ -73,7 +73,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </select>
 
     <br><br>
-    <input type="submit" value="Compare">
+    <button type="submit">Compare</button>
+
 </form>
 
 <?php if ($car1 && $car2): ?>
