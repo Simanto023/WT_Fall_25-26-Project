@@ -96,7 +96,7 @@ if (!empty($cars)) {
         echo "<td>{$car['category']}</td>";
         echo "<td>
                 <button class='edit' onclick='editCar({$car['id']})'>Edit</button>
-                <button class='delete'>Delete</button>
+                <button class="delete" onclick="deleteCar(<?php echo $car['id']; ?>)">Delete</button>
               </td>";
         echo "</tr>";
     }
