@@ -8,3 +8,8 @@ function deleteCategory(id) {
         window.location.href = "PHP/delete_category.php?id=" + id;
     }
 }
+function archiveCategory(id) {
+    if (confirm("Archive this category?")) {
+        window.location.href = "PHP/archive_category.php?id=" + id;
+    }
+}

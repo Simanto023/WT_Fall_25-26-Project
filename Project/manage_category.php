@@ -64,7 +64,7 @@ foreach ($categories as $cat) {
         echo "<td>{$cat['status']}</td>";
     echo "<td>
             <button class='delete' onclick='deleteCategory({$cat['id']})'>Delete</button>
-            <button class='archive' onclick='archiveCategory(id)'>Archive</button>
+            <button class='archive' onclick='archiveCategory({$cat['id']})'>Archive</button>
           </td>";
     echo "</tr>";
 }
