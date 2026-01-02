@@ -35,12 +35,56 @@
     
         <label>Brand</label>
         <select>
-            <option>All Brands</option>
-            <option>Toyota</option>
-            <option>Honda</option>
-            <option>Nissan</option>
-            <option>BMW</option>
-            <option>Mercedes</option>
+        <option>All Brands</option>
+        <option>Abarth</option>
+        <option>Acura</option>
+        <option>Alfa Romeo</option>
+        <option>Audi</option>
+        <option>BMW</option>
+        <option>Bugatti</option>
+        <option>Cadillac</option>
+        <option>Chevrolet</option>
+        <option>Chrysler</option>
+        <option>Citroen</option>
+        <option>Dacia</option>
+        <option>Daewoo</option>
+        <option>Daihatsu</option>
+        <option>Dodge</option>
+        <option>Ferrari</option>
+        <option>Fiat</option>
+        <option>Ford</option>
+        <option>Genesis</option>
+        <option>GMC</option>
+        <option>Honda</option>
+        <option>Hyundai</option>
+        <option>Infiniti</option>
+        <option>Isuzu</option>
+        <option>Jaguar</option>
+        <option>Jeep</option>
+        <option>Kia</option>
+        <option>Lamborghini</option>
+        <option>Land Rover</option>
+        <option>Lexus</option>
+        <option>Maserati</option>
+        <option>Mazda</option>
+        <option>McLaren</option>
+        <option>Mercedes-Benz</option>
+        <option>Mini</option>
+        <option>Mitsubishi</option>
+        <option>Nissan</option>
+        <option>Opel</option>
+        <option>Peugeot</option>
+        <option>Porsche</option>
+        <option>Renault</option>
+        <option>Rolls-Royce</option>
+        <option>Saab</option>
+        <option>Skoda</option>
+        <option>Subaru</option>
+        <option>Suzuki</option>
+        <option>Tesla</option>
+        <option>Toyota</option>
+        <option>Volkswagen</option>
+        <option>Volvo</option>
         </select>
     
     
