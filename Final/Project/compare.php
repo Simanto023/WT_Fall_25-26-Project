@@ -22,8 +22,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $r1 = $conn->query("SELECT * FROM cars WHERE id = $id1");
         $r2 = $conn->query("SELECT * FROM cars WHERE id = $id2");
 
-        if ($r1 && $r1->num_rows == 1) $car1 = $r1->fetch_assoc();
-        if ($r2 && $r2->num_rows == 1) $car2 = $r2->fetch_assoc();
+        if ($r1 && $r1->num_rows == 1){
+            $car1 = $r1->fetch_assoc();
+        }
+        if ($r2 && $r2->num_rows == 1){
+            $car2 = $r2->fetch_assoc();
+        }
     }
 }
 ?>
@@ -49,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <h1>Compare Cars</h1>
 <p>Pick two cars to compare</p>
 
-<form method="post" id="selectors">
+<form action="" method="post" id="selectors">
 
     <select name="car1">
         <option value="">Select Car 1</option>
@@ -78,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <table>
     <tr>
-        <th>Feature</th>
+        <th>Featured Cars</th>
         <th><?php echo $car1['brand']." ".$car1['model']; ?></th>
         <th><?php echo $car2['brand']." ".$car2['model']; ?></th>
     </tr>
