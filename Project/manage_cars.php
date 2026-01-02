@@ -116,41 +116,41 @@ if (!empty($cars)) {
 
         <div class="form-group">
             <label>Brand</label>
-            <input type="text" name="brand">
+            <input type="text" name="brand" value="<?php echo $editCar['brand'] ?? ''; ?>">
         </div>
 
         <div class="form-group">
             <label>Model</label>
-            <input type="text" name="model">
+            <input type="text" name="model" value="<?php echo $editCar['model'] ?? ''; ?>">
         </div>
 
         <div class="form-group">
             <label>Color</label>
-            <input type="text" name="color">
+            <input type="text" name="color" value="<?php echo $editCar['color'] ?? ''; ?>">
         </div>
 
         <div class="form-group">
             <label>Engine Capacity (L)</label>
-            <input type="text" name="engine_capacity">
+            <input type="text" name="engine_capacity" value="<?php echo $editCar['engine_capacity'] ?? ''; ?>">
         </div>
 
         <div class="form-group">
             <label>Horsepower (HP)</label>
-            <input type="number" name="horsepower">
+            <input type="number" name="horsepower" value="<?php echo $editCar['horsepower'] ?? ''; ?>">
         </div>
 
         <div class="form-group">
             <label>Transmission</label>
             <select name="transmission">
-                <option>Automatic</option>
-                <option>Manual</option>
-                <option>CVT</option>
+                <option <?php if (($editCar['transmission'] ?? '') == 'Automatic') echo 'selected'; ?>>Automatic</option>
+                <option <?php if (($editCar['transmission'] ?? '') == 'Manual') echo 'selected'; ?>>Manual</option>
+                <option <?php if (($editCar['transmission'] ?? '') == 'CVT') echo 'selected'; ?>>CVT</option>
             </select>
         </div>
 
         <div class="form-group">
             <label>Price</label>
-            <input type="number" name="price">
+            <input type="number" name="price" value="<?php echo $editCar['price'] ?? ''; ?>">
         </div>
 
         <div class="form-group">
