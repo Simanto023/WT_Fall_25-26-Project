@@ -52,7 +52,7 @@
 
     <table>
         <tr>
-            <th>Feature</th>
+            <th>Featured cars</th>
             <th>Nissan GT-R</th>
             <th>Toyota Supra</th>
         </tr>
