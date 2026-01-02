@@ -1,6 +1,10 @@
 <?php
 include __DIR__ . "/../DB/db.php";
-
+//logic to redirect to manage_cars if link opened directly
+if ($_SERVER["REQUEST_METHOD"] !== "POST" || !isset($_POST['car_id'])) {
+    header("Location: ../manage_cars.php");
+    exit;
+}
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $id = $_POST['car_id'];

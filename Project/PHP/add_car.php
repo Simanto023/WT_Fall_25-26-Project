@@ -2,6 +2,11 @@
 include __DIR__ . "/../DB/db.php";
 
 $carError = "";
+//logic to redirect to manage_cars if link opened directly
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    header("Location: ../manage_cars.php");
+    exit;
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
