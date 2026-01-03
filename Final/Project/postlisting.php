@@ -1,3 +1,9 @@
+<?php
+include "DB/db.php";
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,9 +116,32 @@ if (isset($_POST["submit"])) {
         }
     }
 
-    if ($error == "") {
-        echo "<p style='color:green;'>Form submitted successfully!</p>";
+if ($error == "") {
+
+    
+    $newImageName = time() . "_" . basename($_FILES["image"]["name"]);
+    $targetPath = "images/marketplace/" . $newImageName;
+
+    
+    if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetPath)) {
+
+        
+        $sql = "INSERT INTO marketplace_listings 
+        (car_name, brand, location, cond, price, phonenumber, description, image, status)
+        VALUES 
+        ('$name', '$brand', '$location', '$condition', '$price', '$phonenumber', '$description', '$newImageName', 'active')"; //pore pending korte hobe. activ RAKHLAM TESTING ER JNNO
+
+        if ($conn->query($sql)) {
+            echo "<p style='color:green;'>Listing posted successfully!</p>";
+        } else {
+            echo "<p style='color:red;'>Database error: " . $conn->error . "</p>";
+        }
+
+    } else {
+        echo "<p style='color:red;'>Failed to upload image.</p>";
     }
+}
+
 }
 ?>
 
