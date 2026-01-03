@@ -127,11 +127,28 @@
 </div>
 
 
-<div id="post">
-<a href="postlisting.php">
-    <button style ="background:orange;font-weight: bold;">Post your own listing</button>
-</a>
+<div id="post" style="margin: 20px;">
+    <a href="postlisting.php">
+        <button
+            style="
+                background: orange;
+                color: black;
+                font-weight: bold;
+                padding: 14px 26px;
+                font-size: 16px;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+            "
+            onmouseover="this.style.background='darkorange'"
+            onmouseout="this.style.background='orange'"
+        >
+            Post your own listing
+        </button>
+    </a>
 </div>
+
+
 
 <br>
 <br>

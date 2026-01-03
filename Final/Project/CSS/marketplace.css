@@ -160,24 +160,4 @@ h2{
 
 
 
-#post {
-    margin: 20px;
-}
-
-#post button {
-    background: orange;
-    color: black;
-    border: none;
-    padding: 12px 22px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 6px;
-}
-
-#post button:hover {
-    background: darkorange;
-}
-
-
 
