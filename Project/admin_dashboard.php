@@ -3,9 +3,11 @@
 include __DIR__ . "/DB/db.php";
 
 $adminId = 18;
+$carsCount = 0;
+$pendingListings = 0;
+$categoryCount = 0;
 
 $adminResult = $conn->query("SELECT full_name FROM users WHERE id = $adminId");
-
 $adminName = "Admin";
 
 if ($adminResult && $adminResult->num_rows == 1) {
@@ -13,6 +15,22 @@ if ($adminResult && $adminResult->num_rows == 1) {
     $fullName = $row['full_name'];
     $adminName = explode(" ", $fullName)[0];
 }
+
+$resultcars = $conn->query("SELECT COUNT(*) AS total FROM cars");
+if ($resultcars) {
+    $carsCount = $resultcars->fetch_assoc()['total'];
+}
+
+$resultlistings = $conn->query("SELECT COUNT(*) AS total FROM marketplace_listings WHERE status = 'pending'");
+if ($resultlistings) {
+    $pendingListings = $resultlistings->fetch_assoc()['total'];
+}
+
+$resultcategories = $conn->query("SELECT COUNT(*) AS total FROM categories");
+if ($resultcategories) {
+    $categoryCount = $resultcategories->fetch_assoc()['total'];
+}
+
 ?>
 <!DOCTYPE html>
 <html>
