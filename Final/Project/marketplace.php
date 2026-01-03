@@ -172,58 +172,39 @@ if ($result && $result->num_rows > 0) {
 <br>
 
 
-
 <div id="marketplace">
 
-    <div class="listing-card">
-        <div class="listing-img">Image</div>
-
-        <div class="listing-info">
-            <h3>Car Title</h3>
-            <p>Location</p>
-
-            <div class="listing-meta">
-                Brand <br> <br>
-                Condition
+<?php
+if (!empty($listings)) {
+    foreach ($listings as $item) {
+        echo "
+        <div class='listing-card'>
+            <div class='listing-img'>
+                <img src='images/marketplace/{$item['image']}' 
+                     style='width:100%; height:100%; object-fit:cover;'>
             </div>
 
-            <p class="price">Price</p>
-        </div>
-    </div>
+            <div class='listing-info'>
+                <h3>{$item['car_name']}</h3>
+                <p>{$item['location']}</p>
 
-    <div class="listing-card">
-        <div class="listing-img">Image</div>
+                <div class='listing-meta'>
+                    {$item['brand']}<br><br>
+                    {$item['cond']}
+                </div>
 
-        <div class="listing-info">
-            <h3>Car Title</h3>
-            <p>Location</p>
-
-            <div class="listing-meta">
-                Brand <br> <br>
-                Condition
+                <p class='price'> {$item['price']}</p>
             </div>
-
-            <p class="price">Price</p>
         </div>
-    </div>
-
-    <div class="listing-card">
-        <div class="listing-img">Image</div>
-
-        <div class="listing-info">
-            <h3>Car Title</h3>
-            <p>Location</p>
-
-            <div class="listing-meta">
-                Brand <br> <br>
-                Condition
-            </div>
-
-            <p class="price">Price</p>
-        </div>
-    </div>
+        ";
+    }
+} else {
+    echo "<p style='margin:20px;'>No listings available.</p>";
+}
+?>
 
 </div>
+
 
 
 
