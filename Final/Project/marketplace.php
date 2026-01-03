@@ -207,8 +207,6 @@ if (!empty($listings)) {
 
 
 
-
-
 <a href="user1.html">
     <img src="images/user1.png" id="usericon"
          style="width: 60px;
