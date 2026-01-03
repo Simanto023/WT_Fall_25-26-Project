@@ -1,3 +1,21 @@
+<?php
+include "DB/db.php";
+
+$listings = [];
+
+$sql = "SELECT * FROM marketplace_listings WHERE status = 'active'";
+$result = $conn->query($sql);
+
+if ($result && $result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $listings[] = $row;
+    }
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
