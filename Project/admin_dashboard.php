@@ -60,7 +60,7 @@ if ($resultcategories) {
             <a href="#" class="icon-link">
                 <img src="images/announcement.png" alt="Announcements">
             </a>
-            <a href="login.html" class="logout">Logout</a>
+            <a href="PHP/logout.php" class="logout">Logout</a>
         </div>
 
     </div>
