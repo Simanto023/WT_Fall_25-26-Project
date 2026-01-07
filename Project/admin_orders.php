@@ -26,7 +26,7 @@ if ($result && $result->num_rows > 0) {
             <img src="images/logo.png">
             <span>NG AUTO</span>
         </div>
-        <a href="admin_dashboard.php" class="back">← Back</a>
+        <a href="admin_dashboard.php" class="back">← Back to Dashboard</a>
     </div>
 </header>
 
@@ -62,6 +62,15 @@ for ($i = 0; $i < count($orders); $i++) {
     <td><?php echo ucfirst($order['status']); ?></td>
 
     <td>
+        <?php
+if ($order['status'] == 'completed') {
+    echo "<strong style='color:lightgreen'>Order Completed!</strong>";
+}
+elseif ($order['status'] == 'cancelled') {
+    echo "<strong style='color:#ff6b6b'>Order Cancelled!</strong>";
+}
+else {
+?>
         <form method="post" action="PHP/update_order_status.php">
 
             <input type="hidden" name="order_id" value="<?php echo $order['id']; ?>">
@@ -94,7 +103,9 @@ for ($i = 0; $i < count($orders); $i++) {
             <button type="submit">Save</button>
 
         </form>
-    </td>
+   <?php
+}
+?>
 
     <td><?php echo date("d M Y", strtotime($order['created_at'])); ?></td>
 </tr>
