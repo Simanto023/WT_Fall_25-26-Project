@@ -57,7 +57,7 @@ if ($resultcategories) {
         </div>
 
         <div class="nav-actions">
-            <a href="#" class="icon-link">
+            <a href="admin_announcements.php" class="icon-link">
                 <img src="images/announcement.png" alt="Announcements">
             </a>
             <a href="PHP/logout.php" class="logout">Logout</a>
