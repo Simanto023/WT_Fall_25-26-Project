@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+// block access if not logged in or not admin
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
+    header("Location: login.php");
+    exit;
+}
 include __DIR__ . "/DB/db.php";
 
 $listings = [];
