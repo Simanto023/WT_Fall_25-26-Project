@@ -2,8 +2,7 @@
 include __DIR__ . "/DB/db.php";
 
 $orders = [];
-$sql = "SELECT * FROM orders ORDER BY created_at DESC";
-$result = $conn->query($sql);
+$result = $conn->query("SELECT * FROM orders ORDER BY id DESC");
 
 if ($result && $result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
@@ -24,91 +23,84 @@ if ($result && $result->num_rows > 0) {
 <header>
     <div class="topbar">
         <div class="brand">
-            <img src="images/logo.png" alt="NG Auto">
+            <img src="images/logo.png">
             <span>NG AUTO</span>
         </div>
-
-        <a href="admin_dashboard.php" class="back">← Back to Dashboard</a>
+        <a href="admin_dashboard.php" class="back">← Back</a>
     </div>
 </header>
 
 <main>
 
-    <div class="page-header">
-        <h2>Orders Management</h2>
-    </div>
+<h2>Customer Orders</h2>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Order ID</th>
-                <th>Customer</th>
-                <th>Car</th>
-                <th>Price</th>
-                <th>Phone</th>
-                <th>Address</th>
-                <th>Status</th>
-                 <th>Actions</th>
-                   <th>Order Date</th>
-               
-               
-            </tr>
-        </thead>
+<table>
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Car Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Total ($)</th>
+            <th>Status</th>
+            <th>Update</th>
+            <th>Date</th>
+        </tr>
+    </thead>
 
-        <tbody>
-     <?php
-        foreach ($orders as $order) {
-            echo "<tr>";
+    <tbody>
+<?php
+for ($i = 0; $i < count($orders); $i++) {
+    $order = $orders[$i];
+?>
+<tr>
+    <td><?php echo $order['id']; ?></td>
+    <td><?php echo $order['car_name']; ?></td>
+    <td><?php echo $order['address']; ?></td>
+    <td><?php echo $order['phone_number']; ?></td>
+    <td><?php echo $order['total_amount']; ?></td>
+    <td><?php echo ucfirst($order['status']); ?></td>
 
-            echo "<td>{$order['id']}</td>";
-            echo "<td>{$order['user_id']}</td>";
-            echo "<td>{$order['car_name']}</td>";
-            echo "<td>{$order['address']}</td>";
-            echo "<td>{$order['phone_number']}</td>";
-            echo "<td>{$order['total_amount']}</td>";
+    <td>
+        <form method="post" action="PHP/update_order_status.php">
 
-            echo "<td>
-                <form method='post' action='PHP/update_order_status.php'>
-                    <input type='hidden' name='order_id' value='{$order['id']}'>
+            <input type="hidden" name="order_id" value="<?php echo $order['id']; ?>">
 
-                    <label>
-                        <input type='radio' name='status' value='pending' ".($order['status']=='pending'?'checked':'').">
-                        Pending
-                    </label><br>
+            <label>
+                <input type="radio" name="status" value="confirmed"
+                <?php if ($order['status'] == 'confirmed') echo 'checked'; ?>>
+                Confirm
+            </label>
 
-                    <label>
-                        <input type='radio' name='status' value='confirmed' ".($order['status']=='confirmed'?'checked':'').">
-                        Confirmed
-                    </label><br>
+            <label>
+                <input type="radio" name="status" value="shipped"
+                <?php if ($order['status'] == 'shipped') echo 'checked'; ?>>
+                Ship
+            </label>
 
-                    <label>
-                        <input type='radio' name='status' value='shipped' ".($order['status']=='shipped'?'checked':'').">
-                        Shipped
-                    </label><br>
+            <label>
+                <input type="radio" name="status" value="completed"
+                <?php if ($order['status'] == 'completed') echo 'checked'; ?>>
+                Complete
+            </label>
 
-                    <label>
-                        <input type='radio' name='status' value='completed' ".($order['status']=='completed'?'checked':'').">
-                        Completed
-                    </label><br>
+            <label>
+                <input type="radio" name="status" value="cancelled"
+                <?php if ($order['status'] == 'cancelled') echo 'checked'; ?>>
+                Cancel
+            </label>
 
-                    <label>
-                        <input type='radio' name='status' value='cancelled' ".($order['status']=='cancelled'?'checked':'').">
-                        Cancelled
-                    </label>
-            </td>";
+            <br><br>
+            <button type="submit">Save</button>
 
-            echo "<td>
-                    <button type='submit' class='save'>Save</button>
-                </form>
-            </td>";
-           echo "<td>{$order['created_at']}</td>";
-            echo "</tr>";
-            
-        }
-        
-        ?>
-        </tbody>
-    </table>
+        </form>
+    </td>
+
+    <td><?php echo date("d M Y", strtotime($order['created_at'])); ?></td>
+</tr>
+<?php } ?>
+    </tbody>
+</table>
 
 </main>
 
