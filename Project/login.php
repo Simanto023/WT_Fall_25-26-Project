@@ -1,7 +1,29 @@
 <?php
 session_start();
 include "PHP/login_logic.php";
+include "DB/db.php";
 
+if (!isset($_SESSION['user_id']) && isset($_COOKIE['remember_user'])) {
+
+    $uid = $_COOKIE['remember_user'];
+
+    $result = $conn->query("SELECT * FROM users WHERE id = $uid");
+
+    if ($result && $result->num_rows == 1) {
+        $user = $result->fetch_assoc();
+
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['role'] = $user['role'];
+        $_SESSION['full_name'] = $user['full_name'];
+
+        if ($user['role'] == 'admin') {
+            header("Location: admin_dashboard.php");
+        } else {
+            header("Location: customer_dashboard.php");
+        }
+        exit;
+    }
+}
 ?>
 <!DOCTYPE html>
 <html>

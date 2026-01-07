@@ -43,6 +43,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['role']      = $user['role'];
                 $_SESSION['full_name'] = $user['full_name'];
 
+                 if (isset($_POST['remember'])) {
+        setcookie(
+            "remember_user",
+            $user['id'],
+            time() + (7 * 24 * 60 * 60), // 7 days
+            "/"
+        );
+    }
+
                 //role check
                 if ($user['role'] == 'admin') {
                     header("Location: admin_dashboard.php");
