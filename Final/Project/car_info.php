@@ -27,7 +27,17 @@ if (isset($_GET['id'])) {
     <img src="images/logo.png" id="logo">
 </a>
 
-<a href="catalogue.php" style="margin:20px; display:inline-block;">← Back to Catalogue</a>
+<a href="user.php">
+    <img src="images/user1.png" id="usericon"
+         style="width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    right: 70px;">
+</a>
+
+
+<a href="catalogue.php" style="margin:20px; display:inline-block; color: orange;">← Back to Catalogue</a>
 
 <?php if ($car): ?>
 
@@ -74,7 +84,7 @@ if (isset($_GET['id'])) {
         </table>
 
         <div class="buttons">
-            <button>Buy Now</button>
+            <button>Add to Cart</button>
             <button>Compare</button>
         </div>
     </div>

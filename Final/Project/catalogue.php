@@ -42,9 +42,13 @@ if ($sportsResult && $sportsResult->num_rows > 0) {
     <a href="#" id="sportsBtn">Sports Cars</a>
 </div>
 
-<a href="user1.html">
+<a href="user.php">
     <img src="images/user1.png" id="usericon"
-         style="width:60px; height:60px; position:absolute; top:10px; right:70px;">
+         style="width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    right: 70px;">
 </a>
 
 

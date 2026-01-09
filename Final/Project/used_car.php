@@ -28,6 +28,17 @@ if (isset($_GET['id'])) {
     <img src="images/logo.png" id="logo">
 </a>
 
+
+<a href="user.php">
+    <img src="images/user1.png" id="usericon"
+         style="width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    right: 70px;">
+</a>
+
+
 <a href="marketplace.php" class="back_link">← Back to Marketplace</a>
 
 <?php if ($car): ?>

@@ -60,6 +60,17 @@ if ($result && $result->num_rows > 0) {
     <img src="images/logo.png" id="logo">
 </a>
 
+
+<a href="user.php">
+    <img src="images/user1.png" id="usericon"
+         style="width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    right: 70px;">
+</a>
+
+
 <h2>Most recent used cars for sale</h2>
 
 <form method="get" action="">

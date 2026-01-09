@@ -12,7 +12,7 @@
     <img src="images/logo.png" id="logo">
 </a>
 
-<a href="user1.html">
+<a href="user.php">
     <img src="images/user1.png" id="usericon"
          style="width: 60px;
     height: 60px;

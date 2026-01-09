@@ -44,9 +44,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <img src="images/logo.png" id="logo">
 </a>
 
-<a href="user1.html">
+<a href="user.php">
     <img src="images/user1.png" id="usericon"
-         style="width:60px; height:60px; position:absolute; top:10px; right:70px;">
+         style="width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    right: 70px;">
 </a>
 
 <h1>Compare Cars</h1>
