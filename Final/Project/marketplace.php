@@ -8,10 +8,10 @@ $search = "";
 if (isset($_GET["search"]) && $_GET["search"] != "") {
     $search = $conn->real_escape_string($_GET["search"]);
     $sql = "SELECT * FROM marketplace_listings 
-            WHERE status = 'active' 
+            WHERE status = 'approved' 
             AND car_name LIKE '%$search%'";
 } else {
-    $sql = "SELECT * FROM marketplace_listings WHERE status = 'active'";
+    $sql = "SELECT * FROM marketplace_listings WHERE status = 'approved'";
 }
 
 $result = $conn->query($sql);
