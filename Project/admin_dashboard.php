@@ -10,6 +10,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
 
 $adminId = $_SESSION['user_id']; //stores admin id from session
 $carsCount = 0;
+$activeOrders = 0;
 $pendingListings = 0;
 $categoryCount = 0;
 
@@ -25,6 +26,11 @@ if ($adminResult && $adminResult->num_rows == 1) {
 $resultcars = $conn->query("SELECT COUNT(*) AS total FROM cars");
 if ($resultcars) {
     $carsCount = $resultcars->fetch_assoc()['total'];
+}
+
+$resultOrders = $conn->query("SELECT COUNT(*) AS total FROM orders WHERE status NOT IN ('completed', 'cancelled')");
+if ($resultOrders) {
+    $activeOrders = $resultOrders->fetch_assoc()['total'];
 }
 
 $resultlistings = $conn->query("SELECT COUNT(*) AS total FROM marketplace_listings WHERE status = 'pending'");
@@ -78,7 +84,7 @@ if ($resultcategories) {
                 <span>Total Cars</span>
             </div>
             <div>
-                <strong>14</strong>
+                <strong><?php echo $activeOrders; ?></strong>
                 <span>Active Orders</span>
             </div>
             <div>
