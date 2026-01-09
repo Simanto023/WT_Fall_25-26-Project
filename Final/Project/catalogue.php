@@ -53,12 +53,14 @@ if ($sportsResult && $sportsResult->num_rows > 0) {
 if (!empty($familyCars)) {
     foreach ($familyCars as $car) {
         echo "
-        <div class='family-box'>
-            <img src='images/cars/{$car['image']}'>
-            <h3>{$car['brand']} {$car['model']}</h3>
-            <p>Price: {$car['price']}</p>
-            <p>{$car['horsepower']} HP • {$car['engine_capacity']} • {$car['transmission']}</p>
-        </div>
+        <a href='car_info.php?id={$car['id']}' style='text-decoration:none; color:inherit;'>
+            <div class='family-box'>
+                <img src='images/cars/{$car['image']}'>
+                <h3>{$car['brand']} {$car['model']}</h3>
+                <p>Price: {$car['price']}</p>
+                <p>{$car['horsepower']} HP • {$car['engine_capacity']} • {$car['transmission']}</p>
+            </div>
+        </a>
         ";
     }
 }
@@ -71,12 +73,14 @@ if (!empty($familyCars)) {
 if (!empty($sportsCars)) {
     foreach ($sportsCars as $car) {
         echo "
-        <div class='sports-box'>
-            <img src='images/cars/{$car['image']}'>
-            <h2>{$car['brand']} {$car['model']}</h2>
-            <p>Price: {$car['price']}</p>
-            <p>{$car['horsepower']} HP • {$car['engine_capacity']} • {$car['transmission']}</p>
-        </div>
+        <a href='car_info.php?id={$car['id']}' style='text-decoration:none; color:inherit;'>
+            <div class='sports-box'>
+                <img src='images/cars/{$car['image']}'>
+                <h2>{$car['brand']} {$car['model']}</h2>
+                <p>Price: {$car['price']}</p>
+                <p>{$car['horsepower']} HP • {$car['engine_capacity']} • {$car['transmission']}</p>
+            </div>
+        </a>
         ";
     }
 }
