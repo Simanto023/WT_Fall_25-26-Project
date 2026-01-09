@@ -152,22 +152,24 @@ if ($result && $result->num_rows > 0) {
 <?php
 if (!empty($listings)) {
     foreach ($listings as $item) {
-        echo "
-        <div class='listing-card'>
-            <div class='listing-img'>
-                <img src='images/marketplace/{$item['image']}' style='width:100%; height:100%; object-fit:cover;'>
-            </div>
-            <div class='listing-info'>
-                <h3>{$item['car_name']}</h3>
-                <p>{$item['location']}</p>
-                <div class='listing-meta'>
-                    {$item['brand']}<br><br>
-                    {$item['cond']}
+        echo '
+        <a href="used_car.php?id='.$item['id'].'" style="text-decoration:none; color:white;">
+            <div class="listing-card">
+                <div class="listing-img">
+                    <img src="images/marketplace/'.$item['image'].'" style="width:100%; height:100%; object-fit:cover;">
                 </div>
-                <p class='price'>{$item['price']}</p>
+                <div class="listing-info">
+                    <h3>'.$item['car_name'].'</h3>
+                    <p>'.$item['location'].'</p>
+                    <div class="listing-meta">
+                        '.$item['brand'].'<br><br>
+                        '.$item['cond'].'
+                    </div>
+                    <p class="price">'.$item['price'].'</p>
+                </div>
             </div>
-        </div>
-        ";
+        </a>
+        ';
     }
 } else {
     echo "<p style='margin:20px;'>No listings found.</p>";

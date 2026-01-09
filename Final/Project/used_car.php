@@ -1,3 +1,19 @@
+<?php
+include __DIR__ . "/DB/db.php";
+
+$car = null;
+
+if (isset($_GET['id'])) {
+    $id = intval($_GET['id']);
+
+    $result = $conn->query("SELECT * FROM marketplace_listings WHERE id = $id AND status = 'approved'");
+
+    if ($result && $result->num_rows == 1) {
+        $car = $result->fetch_assoc();
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,57 +30,52 @@
 
 <a href="marketplace.php" class="back_link">← Back to Marketplace</a>
 
+<?php if ($car): ?>
+
 <div id="car_container">
 
     <div id="car_image">
-        <img src="images/marketplace/sample_car.jpg">
+        <img src="images/marketplace/<?php echo $car['image']; ?>">
     </div>
 
     <div id="car_details">
-        <h1>Toyota Corolla 2018</h1>
+        <h1><?php echo $car['car_name']; ?></h1>
 
-        <p class="price">Price: ৳ 25,00,000</p>
+        <p class="price">Price: ৳ <?php echo $car['price']; ?></p>
 
         <table>
             <tr>
                 <td>Brand</td>
-                <td>Toyota</td>
+                <td><?php echo $car['brand']; ?></td>
             </tr>
             <tr>
                 <td>Location</td>
-                <td>Dhaka</td>
+                <td><?php echo $car['location']; ?></td>
             </tr>
             <tr>
                 <td>Condition</td>
-                <td>Used</td>
+                <td><?php echo $car['cond']; ?></td>
             </tr>
             <tr>
                 <td>Description</td>
-                <td>Well maintained, single owner, low mileage.</td>
+                <td><?php echo $car['description']; ?></td>
             </tr>
         </table>
 
         <div class="phone_box">
             <button id="show_phone_btn">Show Phone Number</button>
-            <p id="phone_number" style="display:none;">01XXXXXXXXX</p>
+            <p id="phone_number" style="display:none;"><?php echo $car['phone_number']; ?></p>
         </div>
 
     </div>
 
 </div>
 
+<?php else: ?>
 
-<a href="user1.html">
-    <img src="images/user1.png" id="usericon"
-         style="width: 60px;
-    height: 60px;
-    position: absolute;
-    top: 10px;
-    right: 70px;">
-</a>
+<h2 class="not_found">Listing not found.</h2>
 
-
-
+<?php endif; ?>
 
 <div id="footer">
     <p>© 2025 NG Auto. All rights reserved.</p>
