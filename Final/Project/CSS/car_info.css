@@ -1,0 +1,97 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial;
+    padding-top: 130px;
+}
+
+#logo {
+    width: 150px;
+    height: 82px;
+    object-fit: cover;
+    border-radius: 6px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 42px;
+}
+
+#car_container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+#car_image_box {
+    width: 50%;
+}
+
+#car_image {
+    width: 100%;
+    border-radius: 12px;
+}
+
+#car_info_box {
+    width: 50%;
+    background: #111;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+#car_info_box h2 {
+    color: orange;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+#car_info_box p {
+    font-size: 17px;
+    margin: 12px 0;
+    color: #ddd;
+}
+
+#buy_btn {
+    background: orange;
+    color: black;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-top: 20px;
+}
+
+#buy_btn:hover {
+    background: darkorange;
+}
+
+#compare_btn {
+    background: none;
+    color: orange;
+    border: 1px solid orange;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#compare_btn:hover {
+    background: orange;
+    color: black;
+}
+
+#footer {
+    text-align: center;
+    margin-top: 120px;
+    padding: 25px;
+    font-size: 14px;
+    opacity: 0.7;
+}
