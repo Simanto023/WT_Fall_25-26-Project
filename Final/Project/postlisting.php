@@ -29,7 +29,7 @@ $brand = "";
 $location = "";
 $condition = "";
 $price = "";
-$phonenumber = "";
+$phone_number = "";
 $description = "";
 $image = "";
 
@@ -79,19 +79,19 @@ if (isset($_POST["submit"])) {
 
 
     // Phone number
-    if ($_POST["phonenumber"] === "") {
+    if ($_POST["phone_number"] === "") {
     $error .= "Phone number is required.<br>";
     } 
     else {
-    $phonenumber = $_POST["phonenumber"];
+    $phone_number = $_POST["phone_number"];
 
-    if (!is_numeric($phonenumber)) {
+    if (!is_numeric($phone_number)) {
         $error .= "Phone number must be numeric.<br>";
     }
-    else if (strlen($phonenumber) != 11) {
+    else if (strlen($phone_number) != 11) {
         $error .= "Phone number must be 11 digits.<br>";
     }
-    else if (substr($phonenumber, 0, 2) != "01") {
+    else if (substr($phone_number, 0, 2) != "01") {
         $error .= "Phone number must start with 01.<br>";
     }
     }
@@ -127,9 +127,9 @@ if ($error == "") {
 
         
         $sql = "INSERT INTO marketplace_listings 
-        (car_name, brand, location, cond, price, phonenumber, description, image, status)
+        (car_name, brand, location, cond, price, phone_number, description, image, status)
         VALUES 
-        ('$name', '$brand', '$location', '$condition', '$price', '$phonenumber', '$description', '$newImageName', 'active')"; //pore pending korte hobe. activ RAKHLAM TESTING ER JNNO
+        ('$name', '$brand', '$location', '$condition', '$price', '$phone_number', '$description', '$newImageName', 'active')"; //pore pending korte hobe. activ RAKHLAM TESTING ER JNNO
 
         if ($conn->query($sql)) {
             echo "<p style='color:green;'>Listing posted successfully!</p>";
@@ -226,7 +226,7 @@ if ($error == "") {
     <input type="number" name="price" value="<?php echo $price; ?>"><br><br>
 
     <label>Phone Number:</label><br>
-    <input type="number" name="phonenumber" value="<?php echo $phonenumber; ?>"><br><br>
+    <input type="number" name="phone_number" value="<?php echo $phone_number; ?>"><br><br>
 
     <label>Description:</label><br>
     <textarea name="description" rows="4" cols="40"><?php echo $description; ?></textarea><br><br>
