@@ -2,16 +2,15 @@ body {
     background: black;
 }
 
+/* TOP NAV */
 #p1 {
     width: 80%;
     margin: 20px auto;
     background: #ffffff;
     padding: 15px 40px;
-
     display: flex;
     justify-content: space-around;
     align-items: center;
-
     position: relative;
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     box-sizing: border-box;
@@ -41,6 +40,7 @@ body {
     transform: translateY(-50%);
 }
 
+/* BACKGROUND */
 #bg {
     position: fixed;
     top: 0;
@@ -51,10 +51,43 @@ body {
     z-index: -1;
 }
 
+/* MAIN CONTENT */
+#main_wrapper {
+    padding: 60px;
+}
+
+/* ANNOUNCEMENT */
+#announcement_panel {
+    max-width: 450px;
+    margin: 120px 50px 40px;
+    background: #111;
+    border: 2px solid orange;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#announcement_panel h2 {
+    color: orange;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.announcement_box {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background: #222;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 1.6;
+}
+
 /* SEARCH BOX */
 .search-box {
     color: white;
-    margin: 140px 50px;
+    margin: 40px 50px 40px;
     max-width: 450px;
     font-family: Arial;
 }
@@ -102,7 +135,8 @@ body {
 /* WHY SECTION */
 .why-section {
     color: white;
-    margin: -10px 50px;
+    margin: 40px 50px;
+    max-width: 600px;
     font-family: Arial;
 }
 
@@ -128,53 +162,3 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
-
-
-
-.reviews-section {
-    color: white;
-    margin: 10px 50px;
-    font-family: Arial;
-}
-
-.reviews-section h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.review-boxes {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.review {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 15px 20px;
-    width: 260px;
-}
-
-.stars {
-    color: #f4c542;
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
-.review p {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.review h4 {
-    font-size: 14px;
-    margin: 0;
-    color: #d5d5d5;
-}
-
-
-
-
-
-
