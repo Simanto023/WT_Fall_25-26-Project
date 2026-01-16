@@ -1,6 +1,7 @@
 <?php 
 
-include __DIR__ . "/DB/db.php";
+include __DIR__ . "/../../DB/db.php";
+
 
 session_start();
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
@@ -28,7 +29,12 @@ if ($resultcars) {
     $carsCount = $resultcars->fetch_assoc()['total'];
 }
 
-$resultOrders = $conn->query("SELECT COUNT(*) AS total FROM orders WHERE status NOT IN ('completed', 'cancelled')");
+$resultOrders = $conn->query("
+    SELECT COUNT(*) AS total 
+    FROM orders 
+    WHERE status NOT IN ('completed', 'cancelled')
+");
+
 if ($resultOrders) {
     $activeOrders = $resultOrders->fetch_assoc()['total'];
 }
@@ -58,15 +64,15 @@ if ($resultcategories) {
     <div class="topbar">
 
         <div class="brand">
-            <img src="images/logo.png" alt="NG Auto">
+            <img src="../../images/logo.png" alt="NG Auto">
             <span>NG AUTO</span>
         </div>
 
         <div class="nav-actions">
             <a href="admin_announcements.php" class="icon-link">
-                <img src="images/announcement.png" alt="Announcements">
+                <img src="../../images/announcement.png" alt="Announcements">
             </a>
-            <a href="PHP/logout.php" class="logout">Logout</a>
+            <a href="../Controller/logout.php" class="logout">Logout</a>
         </div>
 
     </div>

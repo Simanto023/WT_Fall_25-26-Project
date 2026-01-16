@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     header("Location: login.php");
     exit;
 }
-include __DIR__ . "/DB/db.php";
+include __DIR__ . "/../../DB/db.php";
 
 $orders = [];
 $result = $conn->query("SELECT * FROM orders ORDER BY id DESC");
@@ -30,7 +30,7 @@ if ($result && $result->num_rows > 0) {
 <header>
     <div class="topbar">
         <div class="brand">
-            <img src="images/logo.png">
+            <img src="../../images/logo.png">
             <span>NG AUTO</span>
         </div>
         <a href="admin_dashboard.php" class="back">← Back to Dashboard</a>
@@ -78,7 +78,7 @@ elseif ($order['status'] == 'cancelled') {
 }
 else {
 ?>
-        <form method="post" action="PHP/update_order_status.php">
+        <form method="post" action="../Controller/update_order_status.php">
 
             <input type="hidden" name="order_id" value="<?php echo $order['id']; ?>">
 

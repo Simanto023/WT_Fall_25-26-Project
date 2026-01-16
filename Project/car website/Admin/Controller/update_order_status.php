@@ -1,8 +1,8 @@
 <?php
-include __DIR__ . "/../DB/db.php";
+include __DIR__ . "/../../DB/db.php";;
 // block direct access
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: ../admin_orders.php");
+    header("Location: ../View/admin_orders.php");
     exit;
 }
 
@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $conn->query("UPDATE orders SET status='$status' WHERE id=$id");
 
-    header("Location: ../admin_orders.php");
+    header("Location: ../View/admin_orders.php");
     exit;
 }
 ?>

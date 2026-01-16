@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . "/../DB/db.php";
+include __DIR__ . "/../../DB/db.php";
 
 $emailErrors    = [];
 $passwordErrors = [];
@@ -54,9 +54,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 //role check
                 if ($user['role'] == 'admin') {
-                    header("Location: admin_dashboard.php");
+                    header("Location: ../View/admin_dashboard.php");
                 } else {
-                    header("Location: customer_dashboard.php");
+                    header("Location: xxxxxxxxxx");
                 }
                 exit;
 

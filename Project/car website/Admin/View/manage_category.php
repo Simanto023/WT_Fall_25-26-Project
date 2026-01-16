@@ -3,10 +3,10 @@ session_start();
 
 // block access if not logged in or not admin
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
-    header("Location: login.php");
+    header("Location: ../View/login.php");
     exit;
 }
-include __DIR__ . "/DB/db.php";
+include __DIR__ . "/../../DB/db.php";
 
 $categoryError = "";
 $openForm = false;
@@ -48,7 +48,7 @@ if (isset($_GET["error"])) {
 <header>
     <div class="topbar">
         <div class="brand">
-            <img src="images/logo.png" alt="NG Auto">
+            <img src="../../images/logo.png" alt="NG Auto">
             <span>NG AUTO</span>
         </div>
 
@@ -92,7 +92,7 @@ foreach ($categories as $cat) {
 ?>
         </tbody>
     </table>
-<form id="categoryForm" method="post" action="PHP/add_category.php" style="display: <?php echo $openForm ? 'block' : 'none'; ?>;">
+<form id="categoryForm" method="post" action="../Controller/add_category.php" style="display: <?php echo $openForm ? 'block' : 'none'; ?>;">
         <div class="form-group">
             <label>Category Name</label>
             <input type="text" name="category_name" placeholder="e.g. SUV, Sedan">

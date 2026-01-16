@@ -3,10 +3,10 @@ session_start();
 
 // block access if not logged in or not admin
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
-    header("Location: login.php");
+    header("Location: ../View/login.php");
     exit;
 }
-include __DIR__ . "/DB/db.php";
+include __DIR__ . "/../../DB/db.php";
 
 $cars = [];
 $sql = "SELECT * FROM cars";
@@ -61,7 +61,7 @@ if ($catResult && $catResult->num_rows > 0) {
 <header>
     <div class="topbar">
         <div class="brand">
-            <img src="images/logo.png" alt="NG Auto">
+            <img src="../../images/logo.png" alt="NG Auto">
             <span>NG AUTO</span>
         </div>
         <a href="admin_dashboard.php" class="back">← Back to Dashboard</a>
@@ -99,7 +99,7 @@ if (!empty($cars)) {
     foreach ($cars as $car) {
         echo "<tr>";
         echo "<td>
-        <img src='images/cars/{$car['image']}' class='car-thumb'>
+        <img src='../../images/cars/{$car['image']}' class='car-thumb'>
       </td>";
         echo "<td>{$car['brand']}</td>";
         echo "<td>{$car['model']}</td>";
@@ -123,7 +123,7 @@ if (!empty($cars)) {
     
     <form id="carForm"
           method="post"
-          action="PHP/<?php echo $editCar ? 'update_car.php' : 'add_car.php'; ?>"
+          action="../Controller/<?php echo $editCar ? 'update_car.php' : 'add_car.php'; ?>"
           enctype="multipart/form-data"
           style="display: <?php echo $openForm ? 'block' : 'none'; ?>;">
 

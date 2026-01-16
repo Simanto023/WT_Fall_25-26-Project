@@ -1,5 +1,6 @@
 <?php
-include __DIR__ . "/DB/db.php";
+include __DIR__ . "/../../DB/db.php";
+
 
 session_start();
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
@@ -33,7 +34,7 @@ if ($result && $result->num_rows > 0) {
 <header>
     <div class="topbar">
         <div class="brand">
-            <img src="images/logo.png">
+            <img src="../../images/logo.png">
             <span>NG AUTO</span>
         </div>
         <a href="admin_dashboard.php" class="back">← Back to Dashboard</a>
@@ -44,7 +45,7 @@ if ($result && $result->num_rows > 0) {
 
 <h2>Global Announcements</h2>
 
-<form method="post" action="PHP/add_announcements.php" class="announcement-form">
+<form method="post" action="../Controller/add_announcements.php" class="announcement-form">
     <div class="form-group">
         <label>Title</label>
         <input type="text" name="title" required>

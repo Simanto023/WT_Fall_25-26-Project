@@ -1,4 +1,4 @@
-<?php include "PHP/register_logic.php"; ?>
+<?php include "../Controller/register_logic.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +11,7 @@
 
 <header>
     <div id="header">
-        <img src="images/logo.png" id="header-logo">
+        <img src="../../images/logo.png" id="header-logo">
         <h2>NG Auto</h2>
     </div>
 </header>

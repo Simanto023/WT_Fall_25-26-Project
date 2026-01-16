@@ -6,7 +6,8 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     header("Location: login.php");
     exit;
 }
-include __DIR__ . "/DB/db.php";
+include __DIR__ . "/../../DB/db.php";
+
 
 $listings = [];
 $filterStatus = "all";
@@ -45,7 +46,7 @@ if ($result && $result->num_rows > 0) {
 <header>
     <div class="topbar">
         <div class="brand">
-            <img src="images/logo.png" alt="NG Auto">
+            <img src="../../images/logo.png" alt="NG Auto">
             <span>NG AUTO</span>
         </div>
         <a href="admin_dashboard.php" class="back">← Back to Dashboard</a>
@@ -88,7 +89,7 @@ if ($result && $result->num_rows > 0) {
 foreach ($listings as $row) {
     echo "<tr>";
 
-    echo "<td><img src='images/cars/{$row['image']}' class='car-thumb'></td>";
+    echo "<td><img src='../../images/cars/{$row['image']}' class='car-thumb'></td>";
     echo "<td>{$row['car_name']}</td>";
     echo "<td>{$row['brand']}</td>";
     echo "<td>{$row['location']}</td>";
@@ -102,14 +103,14 @@ foreach ($listings as $row) {
     if ($row['status'] == 'pending') {
 
         echo "
-        <form method='post' action='PHP/approve_listing.php' style='margin-bottom:6px;'>
+        <form method='post' action='../Controller/approve_listing.php' style='margin-bottom:6px;'>
             <input type='hidden' name='listing_id' value='{$row['id']}'>
             <textarea name='admin_comment' placeholder='Comment (optional)'
                 style='width:100%; height:50px;'></textarea>
             <button type='submit' class='save'>Approve</button>
         </form>
 
-        <form method='post' action='PHP/reject_listing.php'>
+        <form method='post' action='../Controller/reject_listing.php'>
             <input type='hidden' name='listing_id' value='{$row['id']}'>
             <textarea name='admin_comment' placeholder='Comment (optional)'
                 style='width:100%; height:50px;'></textarea>
@@ -121,7 +122,7 @@ foreach ($listings as $row) {
 
     else {
         echo "
-        <form method='post' action='PHP/delete_listing.php'
+        <form method='post' action='../Controller/delete_listing.php'
               onsubmit=\"return confirm('Delete this listing permanently?');\">
             <input type='hidden' name='listing_id' value='{$row['id']}'>
             <button type='submit' class='delete'>Delete</button>

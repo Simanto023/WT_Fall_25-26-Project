@@ -1,6 +1,5 @@
 <?php
-include __DIR__ . "/../DB/db.php";
-
+include __DIR__ . "/../../DB/db.php";
 $nameErrors     = [];
 $emailErrors    = [];
 $passwordErrors = [];
@@ -86,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($conn->query($sql)) {
     echo "<script>
             alert('Registration successful! Please login.');
-            window.location.href = 'login.php';
+            window.location.href = '../View/login.php';
           </script>";
     exit;
 }

@@ -1,7 +1,8 @@
 <?php
 session_start();
-include "PHP/login_logic.php";
-include "DB/db.php";
+include "../Controller/login_logic.php";
+include __DIR__ . "/../../DB/db.php";
+
 
 if (!isset($_SESSION['user_id']) && isset($_COOKIE['remember_user'])) {
 
@@ -37,7 +38,7 @@ if (!isset($_SESSION['user_id']) && isset($_COOKIE['remember_user'])) {
 
 <header>
     <div id="header">
-        <img src="images/logo.png" id="header-logo">
+        <img src="../../images/logo.png" id="header-logo">
         <h2>NG Auto</h2>
     </div>
 </header>

@@ -1,10 +1,10 @@
 <?php
-include __DIR__ . "/../DB/db.php";
+include __DIR__ . "/../../DB/db.php";
 
 
 //logic to redirect to manage_cars if link opened directly
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: ../manage_cars.php");
+    header("Location: ../View/manage_cars.php");
     exit;
 }
 
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         empty($engine_capacity) || empty($horsepower) ||
         empty($transmission) || empty($price) || empty($category)||empty($_FILES["image"]["name"])
     ) {
-        header("Location: ../manage_cars.php?error=1&openForm=1");
+        header("Location: ../View/manage_cars.php?error=1&openForm=1");
         exit;
     }
 
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
              '$transmission', '$price', '$category', '$image')";
 
     if ($conn->query($sql)) {
-        header("Location: ../manage_cars.php");
+        header("Location: ../View/manage_cars.php");
         exit;
     }
 
