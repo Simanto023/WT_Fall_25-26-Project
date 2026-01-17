@@ -21,7 +21,7 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <title>Used Car Details</title>
     <link rel="stylesheet" href="../View/css/used_car.css">
-    <script src=../View/js/used_car.js" defer></script>
+    <script src="../View/js/used_car.js" defer></script>
 </head>
 <body>
 

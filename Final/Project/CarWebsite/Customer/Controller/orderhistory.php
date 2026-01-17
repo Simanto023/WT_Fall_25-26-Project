@@ -1,3 +1,11 @@
+<?php
+include "../../DB/db.php";
+
+// Fetch only shipped orders
+$sql = "SELECT * FROM orders WHERE status = 'shipped' ORDER BY created_at DESC";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,58 +15,43 @@
 </head>
 <body>
 
-
 <a href="dashboard.php">
     <img src="../../images/logo.png" id="logo">
 </a>
-
-
-
 
 <h1>Order History</h1>
 
 <div id="orders">
 
-    <div class="order_card">
-        <h3>Toyota Corolla</h3>
-        <p>Order ID:#1001</p>
-        <p>Date: 12 Jan 2025</p>
-        <p>Price: 2,500,000</p>
-        <p>Status: Completed</p>
-    </div>
+<?php if ($result && $result->num_rows > 0): ?>
+    <?php while ($row = $result->fetch_assoc()): ?>
 
-    <div class="order_card">
-        <h3>Honda Civic</h3>
-        <p>Order ID: #1002</p>
-        <p>Date: 20 Feb 2025</p>
-        <p>Price: 3,200,000</p>
-        <p>Status: Pending</p>
-    </div>
+        <div class="order_card">
+            <h3><?php echo htmlspecialchars($row['car_name']); ?></h3>
+            <p>Order ID: #<?php echo $row['id']; ?></p>
+            <p>Date: <?php echo date("d M Y", strtotime($row['created_at'])); ?></p>
+            <p>Price: <?php echo number_format($row['total_amount']); ?></p>
+            <p>Status: <?php echo ucfirst($row['status']); ?></p>
+        </div>
 
-    <div class="order_card">
-        <h3>Nissan X-Trail</h3>
-        <p>Order ID: #1003</p>
-        <p>Date: 05 Mar 2025</p>
-        <p>Price: 3,800,000</p>
-        <p>Status: Cancelled</p>
-    </div>
+    <?php endwhile; ?>
+<?php else: ?>
+    <p style="color:white; text-align:center;">No shipped orders found.</p>
+<?php endif; ?>
 
 </div>
-
-
 
 <a href="user.php">
     <img src="../../images/user1.png" id="usericon"
          style="width: 60px;
-    height: 60px;
-    position: absolute;
-    top: 10px;
-    right: 70px;">
+         height: 60px;
+         position: absolute;
+         top: 10px;
+         right: 70px;">
 </a>
 
-
 <div id="footer" style="
-       text-align: center;
+    text-align: center;
     color: white;
     margin-top: 100px;
     padding: 20px;
@@ -68,9 +61,6 @@
     <p>© 2025 NG Auto. All rights reserved.</p>
     <p>Contact: support@ngauto.com | +880-111-222-333</p>
 </div>
-
-
-
 
 </body>
 </html>
