@@ -40,6 +40,7 @@ if (!isset($_SESSION['user_id']) && isset($_COOKIE['remember_user'])) {
     <div id="header">
         <img src="../../images/logo.png" id="header-logo">
         <h2>NG Auto</h2>
+        <a href="../../Customer/Controller/index.php" class="back">← Back to Home</a>
     </div>
 </header>
 
