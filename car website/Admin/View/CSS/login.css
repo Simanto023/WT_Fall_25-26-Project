@@ -123,3 +123,12 @@ footer a {
 ::placeholder {
     font-size: 14px;
 }
+
+.back {
+    color: gold;
+}
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

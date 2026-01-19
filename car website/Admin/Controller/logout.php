@@ -9,5 +9,5 @@ if (isset($_COOKIE['remember_user'])) {
     setcookie("remember_user", "", time() - 3600, "/");
 }
 
-header("Location: ../View/login.php");
+header("Location: ../../Customer/Controller/index.php");
 exit;
