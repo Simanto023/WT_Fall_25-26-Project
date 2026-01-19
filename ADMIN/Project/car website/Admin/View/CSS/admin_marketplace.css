@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: #0f0f0f;
+}
+
+header {
+    background: black;
+    padding: 12px 30px;
+    border-bottom: 1px solid #222;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: gold;
+    font-weight: bold;
+}
+
+.brand img {
+    width: 40px;
+}
+
+main {
+    padding: 40px;
+}
+
+
+.page-header {
+    margin-bottom: 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.05);
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    text-align: left;
+}
+
+th {
+    background: rgba(0,0,0,0.6);
+}
+
+.save {
+    background: #2d7a2d;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.cancel {
+    background: #444;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.delete {
+    background: #5c1c1c;
+    color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+.back {
+    color: gold;
+}.car-thumb {
+    width: 60px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #333;
+}
