@@ -1,0 +1,103 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial;
+    padding-top: 130px;
+}
+
+/* Logo */
+#logo {
+    width: 150px;
+    height: 82px;
+    object-fit: cover;
+    border-radius: 6px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Main container */
+#car_container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Image section */
+#car_image {
+    width: 50%;
+}
+
+#car_image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,165,0,0.2);
+}
+
+/* Info section */
+#car_details {
+    width: 50%;
+    background: #111;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+/* Title */
+#car_details h1 {
+    color: orange;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/* Price */
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #ffb347;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    color: #ddd;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    background: orange;
+    color: black;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 15px;
+    border-radius: 6px;
+}
+
+.buttons button:hover {
+    background: darkorange;
+}
+
+/* Footer */
+#footer {
+    text-align: center;
+    margin-top: 120px;
+    padding: 25px;
+    font-size: 14px;
+    opacity: 0.7;
+}

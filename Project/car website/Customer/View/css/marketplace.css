@@ -1,0 +1,155 @@
+body{
+    background-color: black;
+    color: white;
+    padding-top: 110px;
+}
+
+h1{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#logo {
+    width: 150px;
+    height: 82px;
+    object-fit: cover;
+    border-radius: 6px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+h2{
+    color: white;
+    margin: 20px;
+}
+
+#search_box {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+    max-width: 400px;
+}
+
+#search_box input {
+    flex: 1;
+    padding: 8px;
+    background: #222;
+    color: white;
+    border: 1px solid #444;
+}
+
+#search_box button {
+    padding: 8px 15px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+#filter_title {
+    margin: 10px 20px;
+    font-size: 16px;
+    color: #ccc;
+}
+
+
+
+
+
+#filter {
+    margin: 20px;
+}
+
+#filter label {
+    margin-right: 5px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+#filter select {
+    margin-right: 20px;
+    padding: 6px;
+    background: #222;
+    color: white;
+    border: 1px solid #444;
+}
+
+
+
+
+
+#price_range {
+    margin: 20px 0;
+}
+
+#price_range label {
+    font-size: 14px;
+    color: #ccc;
+}
+
+#price_range input {
+    width: 120px;
+    padding: 6px;
+    margin-right: 10px;
+    background: #222;
+    color: white;
+    border: 1px solid #444;
+}
+
+
+
+#marketplace {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+
+.listing-card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    width: 230px;
+    overflow: hidden;
+    color: white;
+}
+
+
+.listing-img {
+    height: 140px;
+    background: #333;
+}
+
+
+.listing-info {
+    padding: 10px;
+}
+
+.listing-info h3 {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.listing-info p {
+    font-size: 12px;
+    color: #bbb;
+}
+
+
+.listing-meta {
+    font-size: 11px;
+    margin: 8px 0;
+}
+
+
+.price {
+    font-weight: bold;
+    margin-top: 5px;
+}

@@ -1,0 +1,164 @@
+body {
+    background: black;
+}
+
+/* TOP NAV */
+#p1 {
+    width: 80%;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+
+#p1 a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#p1 a:hover {
+    color: #f39c12;
+}
+
+#logo {
+    width: 100px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 6px;
+    position: absolute;
+    left: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* BACKGROUND */
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* MAIN CONTENT */
+#main_wrapper {
+    padding: 60px;
+}
+
+/* ANNOUNCEMENT */
+#announcement_panel {
+    max-width: 450px;
+    margin: 120px 50px 40px;
+    background: #111;
+    border: 2px solid orange;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#announcement_panel h2 {
+    color: orange;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.announcement_box {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background: #222;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* SEARCH BOX */
+.search-box {
+    color: white;
+    margin: 40px 50px 40px;
+    max-width: 450px;
+    font-family: Arial;
+}
+
+.search-box h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.search-box p {
+    font-size: 14px;
+    margin: 15px 0 25px;
+    color: #d5d5d5;
+}
+
+.search-area {
+    display: flex;
+}
+
+.search-area input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 6px 0 0 6px;
+}
+
+.search-area button {
+    padding: 12px 20px;
+    background: #f39c12;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+}
+
+.search-area button:hover {
+    background: #d8890f;
+}
+
+/* WHY SECTION */
+.why-section {
+    color: white;
+    margin: 40px 50px;
+    max-width: 600px;
+    font-family: Arial;
+}
+
+.why-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.why-section p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.why-section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    line-height: 2.2;
+}
+
+.why-section li {
+    font-size: 20px;
+    font-weight: bold;
+}
