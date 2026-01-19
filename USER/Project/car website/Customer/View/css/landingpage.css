@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial;
+}
+
+#logo {
+    width: 150px;
+    height: 82px;
+    object-fit: cover;
+    border-radius: 6px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+
+
+
+#main {
+    text-align: center;
+    margin-top: 160px;
+}
+
+#main h1 {
+    font-size: 42px;
+}
+
+#main p {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* BUTTONS */
+button {
+    padding: 12px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.main_btn {
+    background: orange;
+    border: none;
+    font-weight: bold;
+}
+
+.main_btn:hover {
+    background: darkorange;
+}
+
+.secondary_btn {
+    background: none;
+    color: orange;
+    border: 1px solid orange;
+}
+
+.secondary_btn:hover {
+    background: orange;
+    color: black;
+}
+
+/* FEATURES */
+#features {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.feature_box {
+    width: 25%;
+    display: inline-block;
+    background: #222;
+    padding: 20px;
+    margin: 10px;
+}
+
+.feature_box h3 {
+    color: orange;
+}
+
+
+
+#footer {
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+
+
+
+
+#login button {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+    padding: 10px 18px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#login button:hover {
+    background: #555;
+}
+
+

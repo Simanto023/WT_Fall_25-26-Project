@@ -1,0 +1,98 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial;
+    padding-top: 120px;
+}
+
+/* Logo */
+#logo {
+    width: 150px;
+    height: 82px;
+    object-fit: cover;
+    border-radius: 6px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    margin-bottom: 60px;
+    color: orange;
+}
+
+/* Layout */
+#profile_container {
+    width: 75%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Boxes */
+.profile_box {
+    background: #111;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Headings */
+.profile_box h2 {
+    color: orange;
+    margin-bottom: 20px;
+}
+
+/* Text */
+.profile_box p {
+    color: #ccc;
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+/* Forms */
+.profile_box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile_box label {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+.profile_box input {
+    margin-top: 6px;
+    padding: 10px;
+    background: #222;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 4px;
+}
+
+/* Buttons */
+.profile_box button {
+    margin-top: 20px;
+    padding: 12px;
+    background: orange;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.profile_box button:hover {
+    background: darkorange;
+}
+
+/* Footer */
+#footer {
+    text-align: center;
+    margin-top: 120px;
+    padding: 25px;
+    font-size: 14px;
+    opacity: 0.7;
+}
