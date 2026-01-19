@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NG Auto</title>
     <link rel="stylesheet" href="../View/css/landingpage.css">
 </head>
 <body>
@@ -11,19 +11,6 @@
 <a href="dashboard.php">
     <img src="../../images/logo.png" id="logo">
 </a>
-
-<a href="user.php">
-    <img src="../../images/user1.png" id="usericon"
-         style="width: 60px;
-    height: 60px;
-    position: absolute;
-    top: 10px;
-    right: 70px;">
-</a>
-
-
-
-
 
 <div id="main">
     <h1>Welcome to NG Auto</h1>
@@ -38,16 +25,11 @@
     </a>
 
     <br><br>
-    
 
-
-        <a href="login.php" id= "login">
-        <button>Login/Sign Up</button>
-        </a>
+    <a href="../../Admin/View/login.php" id="login">
+        <button>Login / Sign Up</button>
+    </a>
 </div>
-
-
-
 
 <div id="features">
     <div class="feature_box">
@@ -66,14 +48,10 @@
     </div>
 </div>
 
-
-
-
 <div id="footer">
     <p>© 2025 NG Auto. All rights reserved.</p>
     <p>Contact: support@ngauto.com | +880-111-222-333</p>
 </div>
-
 
 </body>
 </html>
