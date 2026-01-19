@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //image 
      $image = time() . "_" . $_FILES["image"]["name"];
-     $targetPath = "../images/cars/" . $image;
+     $targetPath = __DIR__ . "/../../images/cars/" . $image;
      move_uploaded_file($_FILES["image"]["tmp_name"], $targetPath);
 
 

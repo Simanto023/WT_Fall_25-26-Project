@@ -10,6 +10,6 @@ function editCar(id) {
 
 function deleteCar(id) {
     if (confirm("Delete this car?")) {
-        window.location.href = "PHP/delete_car.php?id=" + id;
+        window.location.href = "../Controller/delete_car.php?id=" + id;
     }
 }

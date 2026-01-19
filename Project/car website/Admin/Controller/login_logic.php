@@ -1,6 +1,7 @@
 <?php
 include __DIR__ . "/../../DB/db.php";
 
+
 $emailErrors    = [];
 $passwordErrors = [];
 $loginErrors    = [];
@@ -56,7 +57,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if ($user['role'] == 'admin') {
                     header("Location: ../View/admin_dashboard.php");
                 } else {
-                    header("Location: xxxxxxxxxx");
+                    header("Location: ../../Customer/Controller/dashboard.php");
+
                 }
                 exit;
 
