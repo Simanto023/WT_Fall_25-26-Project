@@ -1,6 +1,6 @@
 <?php
+session_start();
 include __DIR__ . "/../../DB/db.php";
-
 
 $announcement = null;
 
@@ -13,6 +13,11 @@ $result = $conn->query($sql);
 
 if ($result && $result->num_rows > 0) {
     $announcement = $result->fetch_assoc();
+}
+
+$full_name = "";
+if (isset($_SESSION['full_name'])) {
+    $full_name = $_SESSION['full_name'];
 }
 ?>
 
@@ -42,6 +47,12 @@ if ($result && $result->num_rows > 0) {
 
 
 <div id="main_wrapper">
+
+    <?php if (!empty($full_name)): ?>
+        <h2 style="color:white; margin-bottom:20px;">Welcome, <?php echo htmlspecialchars($full_name); ?></h2>
+    <?php else: ?>
+        <h2 style="color:white; margin-bottom:20px;">Welcome to NG Auto</h2>
+    <?php endif; ?>
 
     <?php if ($announcement): ?>
     <div id="announcement_panel">
